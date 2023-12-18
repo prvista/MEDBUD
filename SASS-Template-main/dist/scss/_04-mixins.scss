@@ -1,0 +1,15 @@
+
+@mixin mobile-view {
+    @media only screen and (max-width: 790px) {
+      @content; // Include styles within the mixin
+    }
+  }
+
+
+
+
+
+
+
+
+

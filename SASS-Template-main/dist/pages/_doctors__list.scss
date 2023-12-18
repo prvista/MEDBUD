@@ -1,0 +1,130 @@
+.doctors__list{
+    &__main__title{
+        padding: 0 2rem 2rem 0;
+        h2{
+            font-size: 2.7rem;
+            font-weight: 600;
+        }
+    }
+    &__wrapper{
+        border-radius: 1.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+}
+        ul{
+            padding: 1rem;
+
+            .doctors__list__title{
+                padding: 1.5rem;
+                .doctors__list__title__text{
+                align-items: center;
+                display: flex;
+
+                    h2{
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+
+                    i{
+                        font-size: 1rem;
+                        margin-left: 0.8rem;
+                    }
+                }
+            }
+            li{
+                transition: 0.2s ease;
+                border-radius: 1rem;
+                &:hover{
+                    background: rgb(241, 241, 241);
+                    transition: 0.2s ease;
+                }
+
+                align-items: center;
+                .doctors__list__container{
+                    display: flex;
+                    padding: 1rem;
+
+                    img{
+                        width: 5rem;
+                        border-radius: 0.5rem;
+                    }
+
+                    .doctors__list__name{
+                        width: 45%;
+                        padding: 2rem 1rem;
+                        margin: 0 auto;
+                        display: flex;
+                        align-items: center; 
+
+                        h4{
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            display: flex;
+                        }
+
+                        h6{
+                            font-size: 1.3rem;
+                            display: flex;
+                        }
+                    }
+
+                    .doctors__list__schedule{
+                        width: 30%;
+                        padding: 2rem 1rem;
+                        margin: 0 auto;
+                        display: flex;
+                        align-items: center; 
+
+                        h3{
+                            font-size: 1.3rem;
+                            font-weight: 600;
+                            display: flex;
+                        }
+
+                        h5{
+                            font-size: 1.2rem;
+                            display: flex;
+                        }
+                    }
+
+                    .doctors__list__appointment__btn{
+                        align-items: center;
+                        display: flex;
+                        padding: 2rem 1rem;
+
+                        a{
+                            font-size: 1.3rem;
+                            font-weight: 600;
+                            color: #00b5d0;
+                        }
+                    }
+                }
+            }
+        }       
+        
+        // .dotted__doctors__title{
+        //     p{  
+        //         padding-left: 2rem;
+        //         position: relative;
+        //         &:before{
+        //             content: "";
+        //             display: block;
+        //             width: 120px;
+        //             height: 2px;
+        //             background: black;
+        //             position: absolute;
+        //             left: 1px;
+        //             top: 50%;
+        //         }
+        //         &::after{
+        //             content: "";
+        //             display: block;
+        //             width: 120px;
+        //             height: 2px;
+        //             background: black;
+        //             position: absolute;
+        //             right: 0;
+        //             top: 50%;
+        //         }
+        //     }
+        // }
+}
