@@ -53,8 +53,7 @@ if (!isset($_SESSION['user_name'])) {
                      <a href="#service" class="place">Services <i class="fa-solid fa-caret-down"></i></a>
                      <div class="dropdown">
                         <ul>
-                           <li><a href="./doctor.php">Book Appointment</a></li>
-                           <!-- <li><a href="./medical_record.php">Medical Records</a></li> -->
+                           <li><a href="./dashboard.php">Book Appointment</a></li>
                            <li><a href="#">Department</a></li>
                         </ul>
                      </div>
@@ -103,9 +102,8 @@ if (!isset($_SESSION['user_name'])) {
          </svg>
       </div>
       <!--Waves end-->
-
-
    </header>
+
 
 
 
@@ -140,6 +138,7 @@ if (!isset($_SESSION['user_name'])) {
          </div>
       </div>
    </section>
+
 
    <section class="lower__banner">
       <div class="container">
@@ -188,7 +187,7 @@ if (!isset($_SESSION['user_name'])) {
                   <p>Sat-Sun &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6am-8pm</p>
                   <span></span>
                   <br>
-                  <a href="./appointment.php"><i class="fa-solid fa-phone"></i>Book Appointment</a>
+                  <a href="./dashboard.php"><i class="fa-solid fa-phone"></i>Book Appointment</a>
                </div>
             </div>
             <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -197,6 +196,16 @@ if (!isset($_SESSION['user_name'])) {
          </div>
       </div>
    </section>
+
+
+
+
+
+
+
+
+
+
 
 
    <!-- <section class="service">
@@ -240,7 +249,7 @@ if (!isset($_SESSION['user_name'])) {
                   <img src="./dist/components/img/doctors/tolentino-arnel-MD-1.jpg-1.png" alt="">
                   <div class="our__doctors__item__text">
                      <h3>Dr. Arnel Tolentino</h3>
-                     <h4><i class="fa-solid fa-heart-pulse"></i>ENT-HNS</h4>
+                     <h4>  ENT-HNS</h4>
                   </div>
                </div>
 
@@ -310,15 +319,18 @@ if (!isset($_SESSION['user_name'])) {
 
 
    <footer class="footer">
+      <!-- <div class="upper__bg">
+            <span></span>
+        </div> -->
       <div class="container">
+
+
          <div class="footer__wrapper">
             <div class="footer__section">
                <div class="footer__branding">
-                  <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="">
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia eaque odio repellat, mollitia, obcaecati totam eum aperiam quod doloremque eveniet dolor, facilis esse temporibus illo repellendus exercitationem rerum autem perspiciatis!</p>
-                  <div class="right__reserve">
-                     <p><i class="fa-regular fa-copyright"></i>2023 MEDBUD</p>
-                  </div>
+                  <img src="./dist/components/img/medbud__logo.png" alt="">
+                  <p>non mauris non mauris non mauris non mauris non mauris non mauris non mauris non mauris non mauris</p>
+
                </div>
             </div>
             <div class="links__together">
@@ -336,6 +348,7 @@ if (!isset($_SESSION['user_name'])) {
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">MedTips</a></li>
+                        <li><a href="">Services</a></li>
                         <li><a href="">Contact</a></li>
                         <li><a href="">Login</a></li>
                      </ul>
@@ -352,7 +365,8 @@ if (!isset($_SESSION['user_name'])) {
                      </div>
                      <ul>
                         <li><a href="">Appointment</a></li>
-                        <li><a href="">Medical Record</a></li>
+                        <li><a href="">Appointment</a></li>
+                        <li><a href="">Appointment</a></li>
                      </ul>
                   </div>
                </div>
@@ -366,6 +380,8 @@ if (!isset($_SESSION['user_name'])) {
                         <h1>Others</h1>
                      </ul>
                   </div>
+
+
 
                   <p>Follow us on Social Media</p>
                   <div class="footer__icons">
@@ -381,12 +397,38 @@ if (!isset($_SESSION['user_name'])) {
                         </li>
                      </ul>
                   </div>
+                  <!-- <div class="telephone">
+                            <div class="telephone__text">
+                                <ul>
+                                    <span></span>
+                                    <h1>Telephone</h1>
+                                    <p>09918380404</p>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="email">
+                            <div class="email__text">
+                                <ul>
+                                    <span></span>
+                                    <h1>Email</h1>
+                                    <p>damimongblahblah@gmail.com</p>
+                                </ul>
+                            </div>
+                        </div> -->
                </div>
             </div>
          </div>
       </div>
-   </footer>
+      <div class="right__reserve">
+         <span></span>
+         <div class="right__text">
+            <h1>MEDBUD </h1>
+            <p><i class="fa-regular fa-copyright"></i>&nbsp;2023 All Rights Preserve</p>
+         </div>
 
+      </div>
+   </footer>
 
 
    <!-- <div class="container__form">
@@ -409,21 +451,21 @@ if (!isset($_SESSION['user_name'])) {
    <script>
       $(document).ready(function() {
          $('.slider-nav').slick({
-            slidesToShow: 4, // Number of slides to show at a time
-            slidesToScroll: 4, // Number of slides to scroll
-            autoplay: true, // Autoplay the slider
+            slidesToShow: 4, 
+            slidesToScroll: 4, 
+            autoplay: true,
             dots: true,
-            autoplaySpeed: 4000, // Autoplay speed in milliseconds
+            autoplaySpeed: 4000, 
             responsive: [{
                   breakpoint: 768,
                   settings: {
-                     slidesToShow: 2 // Adjust the number of slides to show on smaller screens if needed
+                     slidesToShow: 2 
                   }
                },
                {
                   breakpoint: 480,
                   settings: {
-                     slidesToShow: 1 // Adjust the number of slides to show on even smaller screens if needed
+                     slidesToShow: 1
                   }
                }
             ]

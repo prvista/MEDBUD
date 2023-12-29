@@ -504,9 +504,6 @@ body {
   transform: scaleY(-1);
 }
 
-.service {
-  padding: 5rem 0;
-}
 .service__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -712,7 +709,7 @@ body {
   margin-bottom: 10px;
   color: #333;
   font-weight: bolder;
-  margin-top: 0; /* Reset top margin to 0 */
+  margin-top: 0;
 }
 
 .sign-in__form form input {
@@ -754,7 +751,7 @@ body {
 }
 
 .sign-in__form form .error-msg {
-  margin-top: 10px; /* Adjust top margin */
+  margin-top: 10px;
   display: block;
   background: crimson;
   color: #fff;
@@ -888,214 +885,279 @@ body {
 
 .footer {
   background: linear-gradient(60deg, rgb(0, 62, 78) 0%, rgb(0, 0, 0) 100%);
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
-.footer__wrapper {
-  display: flex;
-  flex-direction: row;
+.footer .container .footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   gap: 3rem;
+  padding-left: 5rem;
 }
-.footer__wrapper .links__together {
+.footer .container .footer__wrapper .links__together {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 8.5rem;
 }
-.footer .footer__branding {
+.footer .container .footer__branding {
   max-width: 50rem;
 }
-.footer .footer__branding img {
+.footer .container .footer__branding img {
   width: 15rem;
 }
-.footer .footer__branding p {
+.footer .container .footer__branding p {
   color: #ffffff;
 }
-.footer .footer__branding .right__reserve {
+.footer .container .footer__branding .right__reserve {
   padding-top: 5rem;
 }
-.footer .footer__branding .right__reserve p {
+.footer .container .footer__branding .right__reserve p {
   color: #ffffff;
   font-size: large;
 }
-.footer .footer__branding .right__reserve i {
+.footer .container .footer__branding .right__reserve i {
   font-size: small;
 }
-.footer .footer__section {
+.footer .container .footer__section {
   padding: 2rem;
 }
-.footer .footer__section .links h1 {
+.footer .container .footer__section .links h1 {
   color: #ffffff;
 }
-.footer .footer__section .links ul {
+.footer .container .footer__section .links ul {
   transition: 0.5s ease;
 }
-.footer .footer__section .links ul li {
+.footer .container .footer__section .links ul li {
   padding-top: 0.5rem;
 }
-.footer .footer__section .links ul li a {
+.footer .container .footer__section .links ul li a {
   color: rgb(208, 195, 195);
 }
-.footer .footer__section .links ul li :hover {
+.footer .container .footer__section .links ul li :hover {
   color: rgb(58, 200, 219);
   transition: 0.5s ease;
 }
-.footer .footer__section .links__text ul {
+.footer .container .footer__section .links__text ul {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
-.footer .footer__section .links__text ul span {
+.footer .container .footer__section .links__text ul span {
   background-color: rgb(100, 196, 234);
   height: 2rem;
   width: 0.3rem;
   display: flex;
   flex-direction: column;
 }
-.footer .footer__section .service ul {
+.footer .container .footer__section .service ul {
   transition: 0.5s ease;
 }
-.footer .footer__section .service ul li {
+.footer .container .footer__section .service ul li {
   padding-top: 0.5rem;
 }
-.footer .footer__section .service ul li a {
+.footer .container .footer__section .service ul li a {
   color: rgb(208, 195, 195);
 }
-.footer .footer__section .service ul li :hover {
+.footer .container .footer__section .service ul li :hover {
   color: rgb(58, 200, 219);
   transition: 0.5s ease;
 }
-.footer .footer__section .service__text ul {
+.footer .container .footer__section .service__text ul {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
-.footer .footer__section .service__text ul span {
+.footer .container .footer__section .service__text ul span {
   background-color: rgb(100, 196, 234);
   height: 2rem;
   width: 0.3rem;
   display: flex;
   flex-direction: column;
 }
-.footer .footer__section .service__text ul h1 {
+.footer .container .footer__section .service__text ul h1 {
   color: #ffffff;
 }
-.footer .footer__section .others {
+.footer .container .footer__section .others {
   padding-right: 4rem;
 }
-.footer .footer__section .others p {
+.footer .container .footer__section .others .telephone {
+  padding-top: 1rem;
+}
+.footer .container .footer__section .others .telephone h1 {
+  color: #ffffff;
+}
+.footer .container .footer__section .others .telephone p {
+  color: gray;
+  padding: unset;
+}
+.footer .container .footer__section .others .email {
+  padding-top: 1rem;
+}
+.footer .container .footer__section .others .email h1 {
+  color: #ffffff;
+}
+.footer .container .footer__section .others .email p {
+  color: gray;
+  padding: unset;
+}
+.footer .container .footer__section .others p {
   color: #ffffff;
   padding-top: 1rem;
 }
-.footer .footer__section .others__text ul {
+.footer .container .footer__section .others__text ul {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
-.footer .footer__section .others__text ul span {
+.footer .container .footer__section .others__text ul span {
   background-color: rgb(100, 196, 234);
   height: 2rem;
   width: 0.3rem;
   display: flex;
   flex-direction: column;
 }
-.footer .footer__section .others__text ul h1 {
+.footer .container .footer__section .others__text ul h1 {
   color: #ffffff;
 }
-.footer .footer__section .others .footer__icons ul {
+.footer .container .footer__section .others .footer__icons {
+  transform: scale(1);
+}
+.footer .container .footer__section .others .footer__icons i {
+  color: rgb(36, 104, 131);
+}
+.footer .container .footer__section .others .footer__icons ul {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding-top: 1rem;
 }
-.footer .footer__section .others .footer__icons ul li {
+.footer .container .footer__section .others .footer__icons ul li {
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 5rem;
 }
-.footer .footer__section .others .footer__icons ul {
+.footer .container .footer__section .others .footer__icons ul {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-.footer .footer__section .others .footer__icons ul li:hover {
-  scale: 1.1;
+.footer .container .footer__section .others .footer__icons ul li:hover {
+  transform: scale(1.1);
   transition: 0.5s ease;
 }
+.right__reserve {
+  padding: unset;
+  color: #ffffff;
+}
+.right__reserve span {
+  background-color: rgb(48, 73, 83);
+  height: 0.1rem;
+  width: 100%;
+  display: flex;
+}
+.right__reserve .right__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.right__reserve .right__text p {
+  padding-top: 1.5rem;
+  padding-right: 20rem;
+  font-size: 1.5rem;
+}
+.right__reserve .right__text h1 {
+  padding-top: 1.5rem;
+  padding-left: 14rem;
+  font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 790px) {
-  .footer__wrapper {
-    display: flex;
-    flex-direction: column;
+  .footer .container .footer__wrapper {
+    display: unset;
+    flex-direction: row;
   }
-  .footer__wrapper .links__together {
+  .footer .container .footer__wrapper .links__together {
     display: flex;
     flex-direction: row;
     gap: 4rem;
   }
-  .footer__branding .right__reserve {
+  .footer .container .footer__branding .right__reserve {
     display: none;
   }
-  .footer .footer__section .footer__branding {
+  .footer .container .footer__section .footer__branding {
     display: unset;
     flex-direction: unset;
   }
-  .footer .footer__section .links {
+  .footer .container .footer__section .links {
     position: unset;
   }
-  .footer .footer__section .links h1 {
+  .footer .container .footer__section .links h1 {
     font-size: 2.5rem;
   }
-  .footer .footer__section .links__text {
+  .footer .container .footer__section .links__text {
     padding-top: 2rem;
   }
-  .footer .footer__section .links__text ul {
+  .footer .container .footer__section .links__text ul {
     display: flex;
     flex-direction: column-reverse;
     gap: 0.5rem;
   }
-  .footer .footer__section .links__text ul span {
+  .footer .container .footer__section .links__text ul span {
     background-color: rgb(100, 196, 234);
     height: 0.2rem;
     width: 10rem;
     display: flex;
   }
-  .footer .footer__section .service {
+  .footer .container .footer__section .service {
     position: unset;
   }
-  .footer .footer__section .service h1 {
+  .footer .container .footer__section .service h1 {
     font-size: 2.5rem;
   }
-  .footer .footer__section .service__text {
+  .footer .container .footer__section .service__text {
     padding-top: 2rem;
   }
-  .footer .footer__section .service__text ul {
+  .footer .container .footer__section .service__text ul {
     display: flex;
     flex-direction: column-reverse;
     gap: 0.5rem;
   }
-  .footer .footer__section .service__text ul span {
+  .footer .container .footer__section .service__text ul span {
     background-color: rgb(100, 196, 234);
     height: 0.2rem;
     width: 10rem;
     display: flex;
   }
-  .footer .footer__section .others h1 {
+  .footer .container .footer__section .others .telephone {
+    padding-top: 1.5rem;
+  }
+  .footer .container .footer__section .others .email {
+    padding-top: 1.5rem;
+  }
+  .footer .container .footer__section .others h1 {
     font-size: 2.5rem;
   }
-  .footer .footer__section .others__text {
+  .footer .container .footer__section .others__text {
     padding-top: 2rem;
   }
-  .footer .footer__section .others__text ul {
+  .footer .container .footer__section .others__text ul {
     display: flex;
     flex-direction: column-reverse;
     gap: 0.5rem;
   }
-  .footer .footer__section .others__text ul span {
+  .footer .container .footer__section .others__text ul span {
     background-color: rgb(100, 196, 234);
     height: 0.2rem;
     width: 10rem;
     display: flex;
   }
-  .footer__icons ul {
+  .footer .footer__icons ul {
     padding-right: 13rem;
+  }
+  .right__reserve .right__text p {
+    padding-right: 1rem;
+  }
+  .right__reserve .right__text h1 {
+    padding-left: 1rem;
   }
 }
 .header {
@@ -1155,7 +1217,7 @@ body {
 #header {
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   transition: 0.3s ease;
   width: 100%;
   left: 0;
@@ -1190,6 +1252,9 @@ body {
   }
   .header__nav ul li {
     position: relative;
+  }
+  .header__nav ul li a i {
+    font-size: 1rem;
   }
   .header__nav ul li:hover {
     width: 100%;
@@ -1246,7 +1311,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transform: translateY(40px);
-  transition: opacity 0.3s ease, transform 0.5s ease; /* Transition properties */
+  transition: opacity 0.3s ease, transform 0.5s ease;
 }
 .dropdown ul {
   flex-direction: column;
@@ -1256,7 +1321,7 @@ body {
   display: block;
 }
 .dropdown li:last-child {
-  margin-bottom: 0; /* Remove margin between list items */
+  margin-bottom: 0;
 }
 .dropdown a {
   display: block;
@@ -1462,7 +1527,6 @@ table {
   background-color: rgb(5, 65, 65);
 }
 
-/* plus sign */
 .sign {
   width: 100%;
   transition-duration: 0.3s;
@@ -1479,7 +1543,6 @@ table {
   fill: white;
 }
 
-/* text */
 .text {
   position: absolute;
   right: 0%;
@@ -1491,7 +1554,6 @@ table {
   transition-duration: 0.3s;
 }
 
-/* hover effect on button width */
 .logout__btn__animation:hover {
   width: 125px;
   border-radius: 40px;
@@ -1504,7 +1566,6 @@ table {
   padding-left: 20px;
 }
 
-/* hover effect button's text */
 .logout__btn__animation:hover .text {
   opacity: 1;
   width: 70%;
@@ -1512,7 +1573,6 @@ table {
   padding-right: 10px;
 }
 
-/* button click effect*/
 .logout__btn__animation:active {
   transform: translate(2px, 2px);
 }
@@ -1524,6 +1584,144 @@ table {
   color: white;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.floating-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.additional-section-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.additional-section-container .additional-section {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 700px;
+  height: 480px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.2s ease-out;
+}
+.additional-section-container .additional-section .doctor__details__float {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__img__float img {
+  width: 20rem;
+  border: 1px solid rgb(221, 221, 221);
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  border-radius: 1rem;
+  max-width: 40rem;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float h3 {
+  font-size: 2rem;
+  color: rgb(184, 184, 184);
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float h3 i {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  padding: 0.5rem;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float p {
+  font-size: 1.4rem;
+}
+.additional-section-container .additional-section .doctor__details__float .doctor__name__float h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__pf__float {
+  text-align: center;
+  font-weight: 600;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__pf__float h5 {
+  font-size: 2rem;
+  padding-right: 2rem;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__pf__float p {
+  font-size: 1.3rem;
+  color: #00a2ae;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float {
+  text-align: center;
+  font-weight: 600;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float h5 {
+  font-size: 2rem;
+  align-items: center;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float h5 i {
+  font-size: 1.5rem;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float p {
+  font-size: 1.3rem;
+  color: #00a2ae;
+}
+.additional-section-container .additional-section .doctor__contact-pf__float .doctor__appointment__btn a {
+  padding: 1.3rem 2.2rem;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  border-radius: 2rem;
+  font-weight: 600;
+  color: white;
+}
+.additional-section-container .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  display: none;
+}
+.additional-section-container .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
 .users__wrapper {
   display: flex;
@@ -1596,7 +1794,7 @@ table {
 }
 .users__nav ul li {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 .users__nav ul li:hover {
   background: rgb(1, 2, 63);
@@ -1619,9 +1817,9 @@ table {
   background: rgb(0, 45, 71);
 }
 .users__nav ul span:nth-of-type(3) {
-  height: 55rem;
-  width: 30rem;
-  border-bottom: 2px solid rgb(0, 103, 163);
+  height: 0.1rem;
+  width: 100%;
+  background: rgb(0, 45, 71);
 }
 .users__nav .users__side__nav ul:first-of-type {
   margin-bottom: 260px;
@@ -1704,9 +1902,10 @@ table {
 .appointment__banner__text {
   padding: 6rem 0;
   color: #000551;
+  transform: translateX(100px);
 }
 .appointment__banner__text h2 {
-  font-size: 3.3rem;
+  font-size: 3.4rem;
   font-weight: 600;
 }
 .appointment__banner__text ul {
@@ -1741,6 +1940,26 @@ table {
   background-size: cover;
 }
 
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
 .doctors__list__main__title {
   padding: 0 2rem 2rem 0;
 }
@@ -1750,10 +1969,7 @@ table {
 }
 .doctors__list__wrapper {
   border-radius: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
-}
-.doctors__list ul {
-  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .doctors__list ul .doctors__list__title {
   padding: 1.5rem;
@@ -1762,21 +1978,26 @@ table {
   align-items: center;
   display: flex;
 }
-.doctors__list ul .doctors__list__title .doctors__list__title__text h2 {
+.doctors__list ul .doctors__list__title .doctors__list__title__text a {
+  display: flex;
+  align-items: center;
+}
+.doctors__list ul .doctors__list__title .doctors__list__title__text a h2 {
   font-size: 2rem;
   font-weight: 600;
+  padding: 1rem;
 }
-.doctors__list ul .doctors__list__title .doctors__list__title__text i {
+.doctors__list ul .doctors__list__title .doctors__list__title__text a i {
   font-size: 1rem;
   margin-left: 0.8rem;
 }
 .doctors__list ul li {
   transition: 0.2s ease;
-  border-radius: 1rem;
+  border: 1px solid rgba(225, 227, 230, 0.6235294118);
   align-items: center;
 }
 .doctors__list ul li:hover {
-  background: rgb(241, 241, 241);
+  background: rgb(245, 245, 245);
   transition: 0.2s ease;
 }
 .doctors__list ul li .doctors__list__container {
@@ -1795,13 +2016,22 @@ table {
   align-items: center;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__name h4 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   display: flex;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__name h6 {
   font-size: 1.3rem;
   display: flex;
+  font-weight: 500;
+  color: rgb(184, 184, 184);
+  align-items: center;
+}
+.doctors__list ul li .doctors__list__container .doctors__list__name h6 i {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  padding: 0.5rem;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__schedule {
   width: 30%;
@@ -1811,12 +2041,12 @@ table {
   align-items: center;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__schedule h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   display: flex;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__schedule h5 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: flex;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__appointment__btn {
@@ -1826,6 +2056,457 @@ table {
 }
 .doctors__list ul li .doctors__list__container .doctors__list__appointment__btn a {
   font-size: 1.3rem;
+  padding: 1rem 2.2rem;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  border-radius: 2rem;
+  font-weight: 500;
+  color: white;
+}
+.doctors__list .no__doctor__message p {
+  padding: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #00b5d0;
+}
+.doctors__list .doctor__search input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+.doctors__list .doctor__search input[type=text]:focus {
+  border: 2px solid #b1b1b1;
+}
+
+.doc__banner {
+  background-image: url(../components/img/doctor--bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+.doc__banner__wrapper .doc__banner__text {
+  padding: 1rem;
+}
+.doc__banner__wrapper .doc__banner__text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.doc__banner__wrapper .doc__banner__text h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.doc__banner__wrapper .doc__banner__text p {
+  font-weight: 500;
+  width: 80rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.appointment__form {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  display: flex;
+  border-radius: 1.5rem;
+}
+.appointment__form__title h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.appointment__form__title {
+  margin-bottom: 20px;
+}
+
+.appointment__form__title h3 {
+  color: #333;
+}
+
+.appointment-name,
+.appointment-contact,
+.appointment-date,
+.appointment-doctor,
+.appointment-message,
+.appointment-consultaion {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.appointment-name input,
+.appointment-contact input,
+.appointment-date input,
+.appointment-doctor input,
+.appointment-message textarea,
+.appointment-doctor select,
+.appointment-doctor input,
+.appointment-consultaion select {
+  width: 84%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.appointment-name input:focus,
+.appointment-contact input:focus,
+.appointment-date input:focus,
+.appointment-doctor input:focus,
+.appointment-message textarea:focus,
+.appointment-doctor select:focus,
+.appointment-doctor input:focus {
+  border-color: #66b3ff;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+}
+
+.appointment-name {
+  display: flex;
+  gap: 10px;
+}
+.appointment-name label {
+  margin-bottom: 10px;
+}
+
+.appointment-contact {
+  display: flex;
+  gap: 10px;
+}
+
+.appointment-doctor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doctor-name-input {
+  display: flex;
+  gap: 10px;
+}
+
+.appointment-message textarea {
+  width: 100%;
+  min-width: 100%;
+  min-height: 12rem;
+}
+
+.appointment-button {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.appointment-button button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-primary {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.dashboard__wrapper {
+  display: flex;
+}
+.dashboard__wrapper .branding {
+  display: flex;
+  right: 0;
+  position: absolute;
+  max-width: 20rem;
+  max-height: auto;
+  margin: 0.8rem;
+}
+.dashboard__wrapper .branding img {
+  max-width: 12rem;
+  max-height: 5rem;
+}
+.dashboard__name {
+  margin-top: 1rem;
+  font-weight: 600;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  padding: 0.5rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 4rem;
+}
+.dashboard__name h5 {
+  font-size: 2rem;
+  color: #00a2ae;
+}
+.dashboard__name h1 {
+  font-size: 3.4rem;
+  color: #ffffff;
+  align-items: center;
+  display: flex;
+}
+.dashboard__name i {
+  margin-right: 5px;
+  font-size: 3.5rem;
+}
+.dashboard__nav {
+  background: linear-gradient(60deg, rgb(0, 62, 78) 0%, rgb(0, 0, 0) 100%);
+  width: 30rem;
+  height: 93.6vh;
+  left: 0;
+  margin-top: 3rem;
+  position: fixed;
+}
+.dashboard__nav .burger__btn {
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.dashboard__nav .burger__btn span {
+  transition: 0.5s ease;
+  width: 2.2rem;
+  height: 0.3rem;
+  background-color: #ffffff;
+  border-radius: 5rem;
+  display: block;
+}
+.dashboard__nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dashboard__nav ul li {
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+.dashboard__nav ul li:hover {
+  background: rgb(1, 2, 63);
+}
+.dashboard__nav ul li a {
+  color: #ffffff;
+  font-size: 2rem;
+}
+.dashboard__nav ul li a i {
+  margin-right: 1rem;
+}
+.dashboard__nav ul span:nth-of-type(1) {
+  height: 0.1rem;
+  width: 100%;
+  background: rgb(0, 45, 71);
+}
+.dashboard__nav ul span:nth-of-type(2) {
+  height: 0.1rem;
+  width: 100%;
+  background: rgb(0, 45, 71);
+}
+.dashboard__nav ul span:nth-of-type(3) {
+  height: 0.1rem;
+  width: 100%;
+  background: rgb(0, 45, 71);
+}
+.dashboard__nav .dashboard__side__nav ul:first-of-type {
+  margin-bottom: 260px;
+}
+.dashboard__nav .dashboard__side__nav h4 {
+  color: white;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.dashboard__nav .dashboard__side__nav ul li a i {
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+.dashboard__form__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.8rem;
+  padding: 1rem 0.5rem;
+}
+.dashboard__form__title__text h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.dashboard__form__title .dashboard__date h3 {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 500;
+  color: rgb(136, 136, 136);
+}
+.dashboard__form__title .dashboard__date h4 {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.dashboard__banner {
+  background-image: url(../components/img/dashboard__banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+.dashboard__banner__wrapper .dashboard__banner__text {
+  padding: 1rem;
+}
+.dashboard__banner__wrapper .dashboard__banner__text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.dashboard__banner__wrapper .dashboard__banner__text h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.dashboard__banner__wrapper .dashboard__banner__text p {
+  font-weight: 500;
+  width: 80rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.appointment__details__title {
+  padding: 2rem;
+}
+.appointment__details__title h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.appointment__details {
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  border-radius: 7px;
+}
+.appointment__details__information .appointment__details__information__date-time {
+  padding: 1rem;
+  font-weight: 500;
+}
+.appointment__details__information .appointment__details__type {
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  color: #00a2ae;
+}
+.appointment__details__information .appointment__details__doctor {
+  padding: 1rem;
+}
+.appointment__details__information .appointment__details__doctor h2 {
+  font-weight: 500;
+}
+.appointment__details__information .appointment__details__doctor h3 {
+  font-weight: 500;
+}
+
+.lab__banner {
+  background-image: url(../components/img/b4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+.lab__banner__wrapper .lab__banner__text {
+  padding: 1rem;
+}
+.lab__banner__wrapper .lab__banner__text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.lab__banner__wrapper .lab__banner__text h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.lab__banner__wrapper .lab__banner__text p {
+  font-weight: 500;
+  width: 80rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.lab__details__title h2 {
+  padding: 2rem 2rem 1rem 2rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.labtest__wrapper {
+  padding: 1rem;
+}
+.labtest__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.labtest__item {
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  border-radius: 7px;
+  padding: 1.5rem;
+}
+.labtest__item__status h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 2px solid rgba(201, 206, 202, 0.6235294118);
+  max-width: 101px;
+  padding: 0.5rem;
+}
+.labtest__item__title {
+  height: 15rem;
+}
+.labtest__item__title h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1.5rem 0 2rem 0;
+}
+.labtest__item__title h3 {
+  font-size: 1.3rem;
+  padding-bottom: 5rem;
+  font-weight: 400;
+}
+.labtest__item__price {
+  margin-bottom: 1rem;
+}
+.labtest__item__price h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.labtest__item__btn {
+  text-align: center;
+  padding: 1rem;
+}
+.labtest__item__btn a {
+  padding: 1rem 11rem;
+  border-radius: 2rem;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

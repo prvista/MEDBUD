@@ -1,0 +1,108 @@
+.lab__banner{
+    background-image: url(../components/img/b4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 1rem;
+    &__wrapper{
+        .lab__banner__text{
+            padding: 1rem;
+            h2{
+                font-size: 3rem;
+                font-weight: 600;
+                margin: 1rem 0;
+            }
+
+            h3{
+                font-size: 2.5rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
+            }
+
+            p{
+                font-weight: 500;
+                width: 80rem;
+                padding: 1rem;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+.lab__details__title{
+    h2{
+        padding: 2rem 2rem 1rem 2rem;
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+.labtest{
+    &__wrapper{
+        padding: 1rem;
+    }
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    &__item{
+        border: 2px solid #c9cbce9f;
+        border-radius: 7px;
+        padding: 1.5rem;
+        &__status{
+            h2{
+                font-size: 1.2rem;
+                font-weight: 500;
+                border: 2px solid #c9ceca9f;
+                max-width: 101px;
+                padding: 0.5rem;
+
+            }
+        }
+        &__title{
+            height: 15rem;
+            h2{
+                font-weight: 600;
+                font-size: 2rem;
+                padding: 1.5rem 0 2rem 0;
+            }
+
+            h3{
+                font-size: 1.3rem;
+                padding-bottom: 5rem;
+                font-weight: 400;
+            }
+        }
+
+        &__price{
+            margin-bottom: 1rem;
+            h3{
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+
+        }
+
+        &__btn{
+            text-align: center;
+            padding: 1rem;
+            a{
+                padding: 1rem 11rem;
+                border-radius: 2rem;
+                background: linear-gradient(
+                    60deg,
+                    rgb(116, 214, 149) 0%,
+                    rgb(58, 200, 219) 100%);
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    color: white;
+            }
+        }
+    }
+}

@@ -65,7 +65,7 @@
   #header {
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
     transition: 0.3s ease;
     width: 100%;
     left: 0;
@@ -100,6 +100,12 @@
   
           li {
             position: relative;
+
+            a{
+              i{
+                font-size: 1rem;
+              }
+            }
   
             &:hover {
               width: 100%;
@@ -164,7 +170,7 @@
     }
   }
   
-  // Dropdown styles for both desktop and mobile
+
   .dropdown {
     display: none;
     position: absolute;
@@ -177,7 +183,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(40px); 
-    transition: opacity 0.3s ease, transform 0.5s ease; /* Transition properties */
+    transition: opacity 0.3s ease, transform 0.5s ease;
     // margin: 0 auto;
 
     ul {
@@ -188,7 +194,7 @@
     li {
       display: block;
       &:last-child {
-        margin-bottom: 0; /* Remove margin between list items */
+        margin-bottom: 0; 
       }
     }
 
@@ -206,7 +212,6 @@
   }
 
   .navi:nth-child(4) .dropdown {
-    // Adjust left positioning to place the dropdown under "Services"
     left: 56.5%;
     transform: translateX(-50%);
   }
@@ -226,45 +231,11 @@
   .active{
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    // background: linear-gradient(
-    //     60deg,
-    //     rgb(116, 214, 149) 0%,
-    //     rgb(58, 200, 219) 100%
-    //   );
-    // background: linear-gradient(60deg, rgb(0, 99, 124) 0%, rgb(90, 90, 90) 100%);
 }
 
 
 
 
-
-
-
-
-  // Media query for mobile view adjustments
-  
-
-//   .dropdown__nav{
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 100%;
-//     background-color: #ffffff;
-//     z-index: 999;
-
-//     ul{
-//         display: block;
-//         margin: 10px;
-
-//         li{
-//             width: 150px;
-//             padding: 10px;
-//             display: flex;
-
-//         }
-//     }
-//   }
   
 
  

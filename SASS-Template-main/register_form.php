@@ -49,25 +49,6 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-   <!-- <div class="form-container">
-
-      <form action="" method="post">
-
-         <h3>register now</h3>
-
-         <input type="text" name="name" required placeholder="Enter your name">
-         <input type="email" name="email" required placeholder="Enter your email">
-         <input type="password" name="password" required placeholder="Enter your password">
-         <input type="password" name="cpassword" required placeholder="Confirm your password">
-         <select name="user_type">
-            <option value="user">patient</option>
-            <option value="admin">doctor</option>
-         </select>
-         <input type="submit" name="submit" value="register now" class="form-btn">
-         <p>already have an account? <a href="login_form.php">login now</a></p>
-      </form>
-
-   </div> -->
 
 
    <div class="sign-in__form">

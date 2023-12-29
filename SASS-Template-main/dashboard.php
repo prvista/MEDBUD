@@ -11,6 +11,8 @@ if (!isset($_SESSION['admin_name'])) {
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,50 +74,8 @@ if (!isset($_SESSION['admin_name'])) {
         </div>
     </header>
 
-    <!-- <section class="appointment__banner">
-        <div class="container">
-            <div class="appointment__banner__wrapper">
-                <div class="appointment__banner__text">
-                    <h2>Medical Record</h2>
-                    <ul>
-                        <li><a href="./user_page.php">Home</a></li>
-                        <li>&nbsp;/ Medical Record</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <section class="users">
-        <div class="users__wrapper">
-            <div class="users__content">
-                <div class="users__nav">
-                    <div class="users__name">
-                        <h2><?php echo $_SESSION['user_name'] ?></h2>
-                        <h5>Patient</h5>
-                    </div>
-
-                    <div class="users__side__nav">
-                        <h4>CATEGORIES</h4>
-                        <ul>
-                            <li><a href="./dashboard.php"><i class="fa-regular fa-bookmark"></i>Dashboard</a></li>
-                            <span></span>
-                            <li><a href="./medical_record.php"><i class="fa-solid fa-notes-medical"></i>Medical Record</a></li>
-                            <span></span>
-                            <li><a href="./doctor.php"><i class="fa-solid fa-user-doctor"></i>All Doctors</a></li>
-                            <span></span>
-                            <li><a href="./appointment.php"><i class="fa-regular fa-calendar"></i>Schedule Appointment</a></li>
-                            <span></span>
-                            <li><a href="./laboratory.php"><i class="fa-solid fa-flask-vial"></i>Laboratory Tests</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
 
-    <!-- NEW -->
     <section class="dashboard">
         <div class="dashboard__wrapper">
             <div class="dashboard__content">
@@ -130,7 +90,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <ul>
                             <li><a href="./dashboard.php"><i class="fa-regular fa-bookmark"></i>Dashboard</a></li>
                             <span></span>
-                            <li><a href="#"><i class="fa-solid fa-notes-medical"></i>Medical Record</a></li>
+                            <li><a href="./medical_record.php"><i class="fa-solid fa-notes-medical"></i>Medical Record</a></li>
                             <span></span>
                             <li><a href="./doctor.php"><i class="fa-solid fa-user-doctor"></i>All Doctors</a></li>
                             <span></span>
@@ -163,7 +123,7 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="dashboard__form__title">
                 <div class="dashboard__form__title__text">
-                    <h3>Medical Record</h3>
+                    <h3>Dashboard</h3>
                 </div>
 
                 <div class="dashboard__date" id="todayDate">
@@ -175,31 +135,59 @@ if (!isset($_SESSION['admin_name'])) {
             </div>
 
 
-            <div class="lab__banner">
+
+            <div class="dashboard__banner">
                 <div class="container">
-                    <div class="lab__banner__wrapper">
-                        <div class="lab__banner__text">
-                            <h2>MedBud Medical Record</h2>
-                            <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel minus in, quos perferendis nam quas reiciendis impedit maiores saepe.</p>
+                    <div class="dashboard__banner__wrapper">
+                        <div class="dashboard__banner__text">
+                            <h2>Welcome!</h2>
+                            <h3><?php echo $_SESSION['user_name'] ?></h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint ullam saepe laboriosam nihil iusto ipsum impedit temporibus aspernatur. Nulla!</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="lab__details__title">
-                <h2>Laboratory Tests Available</h2>
-            </div> -->
+            <div class="appointment__details__title">
+                <h2>My Appointments</h2>
+                <a href="./sample.php">DITOOOOOOOOOOOOOOO</a>
+            </div>
 
 
+            <div class="appointment__details">
+                <div class="container">
+                    <div class="appointment__details__wrapper">
 
+                        <div class="appointment__details__information">
+                            <div class="appointment__details__information__date-time">
+                                <h2>Appointment Date:</h2>
+                                <h3>Appointment Hour:</h3>
+                            </div>
 
+                            <div class="appointment__details__type">
+                                <h2>
+                                    High Blood
+                                </h2>
+                            </div>
 
+                            <div class="appointment__details__doctor">
+                                <h2>Dr. Reinier</h2>
+                                <h3>Online Consultation</h3>
+                            </div>
+                        </div>
+
+                        <div class="appointment__information__status">
+                            <h2>
+                                Approved
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
-
-
 </body>
 
 </html>

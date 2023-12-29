@@ -55,7 +55,7 @@ if (!isset($_SESSION['admin_name'])) {
                <div class="doctors__side__nav">
                   <h4>CATEGORIES</h4>
                   <ul>
-                     <li><a href=""><i class="fa-solid fa-file"></i>Appointments</a></li>
+                     <li><a href="./sample.php"><i class="fa-solid fa-file"></i>Appointments</a></li>
                      <span></span>
                      <li><a href=""><i class="fa-solid fa-clipboard"></i>Medical Records</a></li>
                      <span></span>

@@ -15,6 +15,72 @@ $doctorName = isset($_GET['doctor']) ? $_GET['doctor'] : 'No Doctor';
 
 ?>
 
+<?php
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "doctor_appointments"; 
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+function insertAppointment($conn)
+{
+  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    // Retrieve and sanitize form data
+    $first_name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
+    $last_name = isset($_POST['last_name']) ? $_POST['last_name'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $appointment_date = isset($_POST['appointment_date']) ? $_POST['appointment_date'] : '';
+    $appointment_time = isset($_POST['appointment_time']) ? $_POST['appointment_time'] : '';
+    $hmo = isset($_POST['hmo']) ? $_POST['hmo'] : '';
+    $consultation_type = isset($_POST['consultation_type']) ? $_POST['consultation_type'] : '';
+    $specialization = isset($_POST['specialization']) ? $_POST['specialization'] : '';
+    $message = isset($_POST['message']) ? $_POST['message'] : '';
+
+
+
+    // Prepare and bind the SQL statement with placeholders
+    $sql = "INSERT INTO appointments (first_name, last_name, email, phone, appointment_date, appointment_time, specialization, message, hmo, consultation_type)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+      die("Error: " . $conn->error); // Check for SQL syntax errors or problems with the SQL statement
+    }
+
+    // Bind parameters with form data and data types
+    $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $appointment_date, $appointment_time, $specialization, $message, $hmo, $consultation_type);
+
+    if ($stmt->execute()) {
+      return true; // Return true if insertion is successful
+    } else {
+      echo "Error: " . $stmt->error; // Check for execution errors
+    }
+
+    $stmt->close();
+  }
+  return false; // Return false if form is not submitted
+}
+
+// Check if the form was submitted and appointment inserted successfully
+if (insertAppointment($conn)) {
+  echo "<script>alert('Appointment successfully booked!');</script>";
+}
+
+$conn->close();
+?>
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +100,8 @@ $doctorName = isset($_GET['doctor']) ? $_GET['doctor'] : 'No Doctor';
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
 </head>
 
 <body>
@@ -52,13 +120,6 @@ $doctorName = isset($_GET['doctor']) ? $_GET['doctor'] : 'No Doctor';
 
             <li class="navi">
               <a href="#service" class="place">Services </a>
-              <!-- <div class="dropdown">
-                <ul>
-                  <li><a href="#">Book Appointment</a></li>
-                  <li><a href="./medical_record.php">Medical Records</a></li>
-                  <li><a href="">Doctors</a></li>
-                </ul>
-              </div> -->
             </li>
 
             <li><a href="">Contact</a></li>
@@ -105,189 +166,158 @@ $doctorName = isset($_GET['doctor']) ? $_GET['doctor'] : 'No Doctor';
           <div class="users__side__nav">
             <h4>CATEGORIES</h4>
             <ul>
-              <li><a href="./doctor.php"><i class="fa-solid fa-user-doctor"></i>Doctors</a></li>
+              <li><a href="./dashboard.php"><i class="fa-regular fa-bookmark"></i>Dashboard</a></li>
               <span></span>
               <li><a href="./medical_record.php"><i class="fa-solid fa-notes-medical"></i>Medical Record</a></li>
               <span></span>
-              <li><a href="#"><i class="fa-solid fa-file"></i>Appointment</a></li>
+              <li><a href="./doctor.php"><i class="fa-solid fa-user-doctor"></i>All Doctors</a></li>
               <span></span>
-              <!-- <li><a href=""><i class="fa-solid fa-calendar"></i>Calendar</a></li> -->
+              <li><a href="./appointment.php"><i class="fa-regular fa-calendar"></i>Schedule Appointment</a></li>
+              <span></span>
+              <li><a href="./laboratory.php"><i class="fa-solid fa-flask-vial"></i>Laboratory Tests</a></li>
             </ul>
-            <!-- <ul>
-              <li><a href="">Settings</a></li>
-              <li><a href="./login_form.php">Log out<i class="fa-solid fa-right-from-bracket"></i></a>
-              </li>
-            </ul> -->
           </div>
         </div>
-
-        <!-- <div class="branding">
-               <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="">
-            </div> -->
       </div>
       <div class="users__table">
-        <div class="second-table">
-          <input type="text" id="doctorNameInput" placeholder="Doctor's Name" value="<?php echo htmlspecialchars($doctorName); ?>">
+        <div class="dashboard__form__title">
+          <div class="dashboard__form__title__text">
+            <h3>Dashboard</h3>
+          </div>
+
+          <div class="dashboard__date" id="todayDate">
+            <h3>Today's Date</h3>
+            <h4> <?php
+                  echo date('F j, Y');
+                  ?></h4>
+          </div>
         </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-            </tr>
-          </tbody>
-        </table>
 
-        <section class="about" id="about">
+        <div class="appointment__form__title">
+          <div class="appointment__form__title__text">
+            <h3>Appointment Form</h3>
+          </div>
+        </div>
+        <div class="appointment__form">
           <div class="container">
-            <div class="about__wrapper">
-              <div class="about__title">
-                <h4>ABOUT<span></span></h4>
-                <h2>WHAT IS MEDBUD</h2>
-              </div>
-              <div class="about__text">
-                <div class="left__about">
-                  <p>Provided b brings together apps, online programs, online forums, and phone services, as well as a range of digital information resources.</p>
-                  <ul>
-                    <li>
-                      <i class="fa-solid fa-check-double"></i>Evidence-based apps and online programs that can help you build personal skills and track progress
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-check-double"></i>Evidence-based apps and online programs that can help you build personal skills and track progress
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-check-double"></i>Evidence-based apps and online programs that can help you build personal skills and track progress
-                    </li>
-                  </ul>
+            <div class="appointment__form__wrapper">
+
+              <form method="post" action="appointment.php" class="appointment-form">
+                <div class="appointment__wrapper">
+                  <label for="">Name</label>
+                  <div class="appointment-name">
+                    <!-- <input type="text" name="first_name" class="app__name" placeholder="First Name">
+                    <input type="text" name="last_name" class="app__name" placeholder="Last Name"> -->
+                    <input type="text" name="first_name" placeholder="First Name">
+                    <input type="text" name="last_name" placeholder="Last Name">
+                  </div>
+                  <div class="appointment-contact">
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                  </div>
+
+                  <div class="appointment-consultaion">
+                    <select class="form-select" name="consultation_type">
+                      <option selected disabled>
+                        Consultaion</option>
+                      <option value="Online">Online</option>
+                      <option value="Outpatient">Outpatient</option>
+                    </select>
+
+                    <select class="form-select" name="hmo">
+                      <option selected disabled>
+                        Select HMOs</option>
+                      <option value="PhilHealth">PhilHealth</option>
+                      <option value="Maxicare"> Maxicare</option>
+                      <option value="Medicard"> Medicard</option>
+                      <option value="Caritas Health Shield">
+                        Caritas Health Shield</option>
+                      <option value="PhilCare">PhilCare</option>
+                      <option value="Pacific Cross Philippines"> Pacific Cross Philippines</option>
+                      <option value="FWD Health"> FWD Health</option>
+                    </select>
+
+
+                  </div>
+
+
+                  <div class="appointment-date">
+                    <input type="date" class="form-control" placeholder="Enter Date" name="appointment_date">
+                    <input type="time" class="form-control" placeholder="Enter Time" name="appointment_time">
+                  </div>
+
+
+                  <div class="appointment-doctor">
+                    <div class="doctor-name-input">
+                      <input type="text" id="doctorNameInput" placeholder="Doctor's Name" value="" name="doctor_name">
+                      <select class="form-select" id="specializationSelect" name="specialization">
+                        <option selected disabled>
+                          Specialization</option>
+                        <option value="Dr. Czarina Basco - OB-Gyne">OB-Gyne</option>
+                        <option value="Dr. Jonathan Coranzo - General Anesthesia">General Anesthesia</option>
+                        <option value="Dr. Angelica Delgado - General Surgery">General Surgery</option>
+                        <option value="Dr. Hervin Tang - IM - Cardiology">IM - Cardiology</option>
+                        <option value="Dr. Arnel Tolentino - ENT-HNS">ENT-HNS</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="appointment-message">
+                    <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="appointment-button">
+                    <button type="button" class="btn btn-outline-secondary float-end me-2">Cancel</button>
+                    <button type="submit" name="submit" class="btn btn-primary float-end" onclick="bookAppointment()">Book Appointment</button>
+                  </div>
                 </div>
-                <div class="right__about">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, omnis quibusdam accusamus doloribus eum, ratione temporibus neque totam suscipit placeat, corporis facilis. Accusamus error maiores, est obcaecati at aut quasi!</p>
-                  <img src="./dist/components/img/about-icon.png" alt="">
-                </div>
-              </div>
+              </form>
+
             </div>
           </div>
-        </section>
+        </div>
+        <br>
+        <br>
+        <div class="appointment__form__title">
+          <div class="appointment__form__title__text">
+            <h3>Appointment Status</h3>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
 
 
+  <script>
+    function bookAppointment() {
+      var formData = new FormData(document.getElementById('appointmentForm'));
 
-  <!-- <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__section">
-          <div class="footer__branding">
-            <img src="./dist/img/Blue Minimalist Medical Logo (1).png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia eaque odio repellat, mollitia, obcaecati totam eum aperiam quod doloremque eveniet dolor, facilis esse temporibus illo repellendus exercitationem rerum autem perspiciatis!</p>
-            <div class="right__reserve">
-              <p><i class="fa-regular fa-copyright"></i>2023 MEDBUD</p>
-            </div>
-          </div>
-        </div>
-        <div class="links__together">
-          <div class="footer__section">
-            <div class="links">
-              <div class="links__text">
-                <ul>
-                  <span></span>
+      // AJAX request
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          if (this.responseText.trim() === 'success') {
+            alert('Appointment successfully booked!');
+          } else if (this.responseText.trim() === 'exists') {
+            alert('Appointment is already booked!');
+          } else {
+            alert('There was an error booking the appointment.');
+          }
+        }
+      };
 
-                  <h1>Links</h1>
-                </ul>
-              </div>
+      xhr.open("POST", "appointment.php");
+      xhr.send(formData);
+    }
+  </script>
 
-              <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">MedTips</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Login</a></li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="footer__section">
-            <div class="service">
-              <div class="service__text">
-                <ul>
-                  <span></span>
-                  <h1>Service</h1>
-                </ul>
-              </div>
-              <ul>
-                <li><a href="">Appointment</a></li>
-                <li><a href="">Appointment</a></li>
-                <li><a href="">Appointment</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer__section">
-          <div class="others">
-            <div class="others__text">
-              <ul>
-                <span></span>
-                <h1>Others</h1>
-              </ul>
-            </div>
-
-            <p>Follow us on Social Media</p>
-            <div class="footer__icons">
-              <ul>
-                <li>
-                  <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa-brands fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa-brands fa-facebook"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer> -->
   <script src="./script.js"></script>
 </body>
 
