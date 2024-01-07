@@ -829,7 +829,6 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 1000px;
-  background: rgb(238, 238, 238);
 }
 
 .sign-in__form form img {
@@ -852,6 +851,10 @@ body {
   margin: 12px 0;
   background: #eee;
   border-radius: 5px;
+}
+.sign-in__form form input:focus {
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+  border-color: #00d87e;
 }
 
 .sign-in__form form select option {
@@ -900,7 +903,7 @@ body {
   justify-content: center;
   padding: 20px;
   padding-bottom: 60px;
-  background: rgb(248, 248, 248);
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
 }
 .sign-in__form__wrapper {
   display: grid;
@@ -1147,7 +1150,7 @@ body {
   padding-right: 0.5rem;
 }
 .banner .flex__container .secColumn__box .corona__checkup img {
-  width: 15rem;
+  width: 12rem;
 }
 .banner .flex__container .secColumn__box .corona__checkup strong {
   font-size: 90px;
@@ -1776,8 +1779,37 @@ body {
     color: black;
   }
 }
-.head__red a:hover {
+#head__red {
+  transition: 0.3s ease;
+}
+#head__red a:hover {
   color: red;
+  transition: 0.3s ease;
+}
+
+#none {
+  display: none;
+}
+
+.login__waves svg {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 400px;
+}
+.login__waves .line {
+  animation: wave 3s infinite ease-in-out;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .doctors__wrapper {
@@ -2591,7 +2623,7 @@ table {
   max-width: 100%;
 }
 .doctors__list__main__title {
-  padding: 0 2rem 2rem 0;
+  padding: 1rem 1rem 0 1rem;
 }
 .doctors__list__main__title h2 {
   font-size: 2.7rem;
@@ -2599,14 +2631,13 @@ table {
 }
 .doctors__list__wrapper {
   border-radius: 0.5rem;
-  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
 }
 .doctors__list ul .doctors__list__title {
   padding: 1.5rem;
 }
 .doctors__list ul .doctors__list__title .doctors__list__title__text {
   align-items: center;
-  display: flex;
 }
 .doctors__list ul .doctors__list__title .doctors__list__title__text a {
   display: flex;
@@ -2619,7 +2650,6 @@ table {
 }
 .doctors__list ul .doctors__list__title .doctors__list__title__text a i {
   font-size: 1rem;
-  margin-left: 0.8rem;
 }
 .doctors__list ul li {
   transition: 0.2s ease;
@@ -2744,7 +2774,7 @@ table {
   justify-content: center;
   display: flex;
   border-radius: 0.5rem;
-  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
 }
 .appointment__form__title h3 {
   font-weight: 600;
@@ -3297,7 +3327,7 @@ table {
   justify-content: space-around;
 }
 .labtest__form .labtest__details {
-  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
   border-radius: 7px;
   padding: 2rem;
 }
@@ -3331,7 +3361,7 @@ table {
   padding: 20px;
   justify-content: center;
   border-radius: 0.5rem;
-  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
   width: 62rem;
 }
 .lab-form__title {
@@ -3436,6 +3466,48 @@ table {
   margin-top: 5rem;
 }
 
+.table__app table,
+.labtest__table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table__app th,
+.table__app td,
+.labtest__table th,
+.labtest__table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table__app th,
+.labtest__table th {
+  background-color: #f2f2f2;
+}
+
+.table__app .btn-container button,
+.labtest__table .btn-container button {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.table__app .btn-container button.save-btn,
+.labtest__table .btn-container button.save-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.table__app .btn-container button.delete-btn,
+.labtest__table .btn-container button.delete-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
 .med__banner {
   background-image: url(../components/img/flat-lay-health-still-life-arrangement-with-copy-space.jpg);
   background-position: center;
@@ -3517,14 +3589,6 @@ table {
 }
 .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation label {
   font-weight: lighter;
-}
-.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::-moz-placeholder {
-  font-family: "montserrat";
-  font-weight: 600;
-}
-.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::placeholder {
-  font-family: "montserrat";
-  font-weight: 600;
 }
 .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input:focus {
   outline: none;
@@ -3656,14 +3720,6 @@ table {
   .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation label {
     font-weight: lighter;
   }
-  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::-moz-placeholder {
-    font-family: "montserrat";
-    font-weight: 600;
-  }
-  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::placeholder {
-    font-family: "montserrat";
-    font-weight: 600;
-  }
   .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -3730,7 +3786,7 @@ table {
   }
 }
 .table__top__space {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .table__app table {

@@ -862,7 +862,7 @@
   // background: #fff;
   text-align: center;
   width: 1000px;
-  background: rgb(238, 238, 238);
+  // background: rgb(238, 238, 238);
 
   // border-radius: 3.5rem;
 }
@@ -890,6 +890,11 @@
   // background: #ffffff;
   background: #eee;
   border-radius: 5px;
+
+  &:focus{
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+    border-color: #00d87e; 
+  }
 
   // height: 100%;
   // width: 100%;
@@ -948,7 +953,8 @@
   justify-content: center;
   padding: 20px;
   padding-bottom: 60px;
-  background: rgb(248, 248, 248);
+  // background: rgb(248, 248, 248);
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);;
 
   &__wrapper{
     display: grid;
@@ -1235,7 +1241,7 @@
           }
           .corona__checkup{
               img{
-                width: 15rem;
+                width: 12rem;
               }
               strong{
                   font-size: 90px;

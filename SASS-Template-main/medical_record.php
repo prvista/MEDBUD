@@ -10,7 +10,6 @@ if (!isset($_SESSION['admin_name'])) {
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +38,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
                 </div>
 
-                <div class="header__nav">
+                <div class="header__nav" id="head__red">
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -192,7 +191,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <div class="patient__input">
                             <h2>Medical Record Form</h3>
                                 <span></span>
-                                <form action="../patient-test/patient_form_post.php" method="POST">
+                                <form action="../SASS-Template-main/medical_record.php" method="POST">
                                     <div class="info_title">
                                         <h3>Personal Information</h3>
                                     </div>

@@ -6,7 +6,8 @@
     justify-content: center;
     display: flex;
     border-radius: 0.5rem;
-    border: 2px solid #c9cbce9f;
+    // border: 2px solid #c9cbce9f;
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
   
     &__title{
       h3{

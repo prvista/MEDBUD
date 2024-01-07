@@ -42,7 +42,7 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
 
                 <div class="header__nav">
-                    <ul class="head__red">
+                    <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
 
@@ -171,27 +171,10 @@ if (!isset($_SESSION['admin_name'])) {
                                     die("Connection failed: " . $conn->connect_error);
                                 }
 
-                                // Initially set variables to display a blank table
-                                $patient = "";
-                                $appointmentDate = "";
-                                $appointmentTime = "";
-                                $consultation = "";
-                                $doctor = "";
-
                                 // Read the latest appointment
                                 $sql = "SELECT * FROM appointments ORDER BY created_at DESC LIMIT 1";
                                 $result = $conn->query($sql);
 
-                                if ($result->num_rows > 0) {
-                                    // Fetch the latest appointment details
-                                    while ($row = $result->fetch_assoc()) {
-                                        $patient = $row["first_name"] . " " . $row["last_name"];
-                                        $appointmentDate = $row["appointment_date"];
-                                        $appointmentTime = $row["appointment_time"];
-                                        $consultation = $row["consultation_type"];
-                                        $doctor = $row["specialization"];
-                                    }
-                                }
                                 ?>
 
                                 <table class="table__app" border="1">
@@ -204,16 +187,19 @@ if (!isset($_SESSION['admin_name'])) {
                                     </tr>
 
                                     <?php
-                                    if ($patient !== "") { // Display the latest appointment only if it exists
-                                        echo "<tr>";
-                                        echo "<td>" . $patient . "</td>";
-                                        echo "<td>" . $appointmentDate . "</td>";
-                                        echo "<td>" . $appointmentTime . "</td>";
-                                        echo "<td>" . $consultation . "</td>";
-                                        echo "<td>" . $doctor . "</td>";
-                                        echo "</tr>";
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo "<tr>";
+                                            echo "<td>" . $row["first_name"] . " " . $row["last_name"] . "</td>";
+                                            echo "<td>" . $row["appointment_date"] . "</td>";
+                                            echo "<td>" . $row["appointment_time"] . "</td>";
+                                            echo "<td>" . $row["consultation_type"] . "</td>";
+                                            echo "<td>" . $row["specialization"] . "</td>";
+
+                                            echo "</tr>";
+                                        }
                                     } else {
-                                        echo "<tr><td colspan='5'>No appointments found</td></tr>";
+                                        echo "<tr><td colspan='12'>No appointments found</td></tr>";
                                     }
                                     ?>
                                 </table>

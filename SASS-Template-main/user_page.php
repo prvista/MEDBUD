@@ -180,7 +180,7 @@ if (!isset($_SESSION['user_name'])) {
                   </div>
                </div>
                <div class="lower__banner__item">
-                  <img src="./dist/components/img-mobile/medtips.webp" alt="">
+                  <img src="./dist/components/img-mobile/medical-report.webp" alt="">
                   <div class="lower__banner__text">
                      <h5>MedTips</h5>
                      <p>Access valuable medical tips and advice through MedBud's MedTips feature. Enhance your health knowledge and well-being with our curated information and recommendations.</p>
@@ -360,7 +360,7 @@ if (!isset($_SESSION['user_name'])) {
                   <div class="corona__checkup">
                      <div class="flex__box">
                         <div class="upper__img">
-                           <img src="./dist/components/img/our-dept/eye-and-vision-doctor.webp" alt="">
+                           <img src="./dist/components/img-mobile/optometrist.webp" alt="">
                            <strong>04</strong>
                         </div>
                         <b>Eye & Vision Doctor</b>

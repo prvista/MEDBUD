@@ -114,9 +114,9 @@ if (!isset($_SESSION['admin_name'])) {
                         <ul>
                             <li><a href="./admin_page.php"><i class="fa-solid fa-file"></i>Appointments</a></li>
                             <span></span>
-                            <li><a href="./medical_record.php"><i class="fa-solid fa-clipboard"></i>Medical Records</a></li>
+                            <li><a href="#"><i class="fa-solid fa-clipboard"></i>Medical Records</a></li>
                             <span></span>
-                            <li><a href="#"><i class="fa-solid fa-address-book"></i>Booked Tests</a></li>
+                            <li><a href="./admin_page_lab.php"><i class="fa-solid fa-address-book"></i>Booked Tests</a></li>
                             <div class="lower__buttons">
                                 <a href="./login_form.php">
                                     <button class="logout__btn__animation">
@@ -142,7 +142,7 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="dashboard__form__title table__top__space">
                 <div class="dashboard__form__title__text">
-                    <h3>Laboratory Test Table</h3>
+                    <h3>Medical Record Table</h3>
                 </div>
 
                 <div class="dashboard__date" id="todayDate">
@@ -153,68 +153,7 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
             </div>
 
-            <?php
-            $servername = "localhost";
-            $username = "root"; // Change as per your MySQL credentials
-            $password = ""; // Change as per your MySQL credentials
-            $dbname = "labtest_db";
-
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            $sql = "SELECT * FROM lab_tests";
-            $result = $conn->query($sql);
-            ?>
-
-
-            <style>
-                /* Include your CSS styles here for table formatting */
-            </style>
-
-            <div class="labtest__table">
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Contact No</th>
-                        <th>Gender</th>
-                        <th>Test Date</th>
-                        <th>Test Time</th>
-                        <th>Selected Tests</th>
-                        <th>Total Amount</th>
-                    </tr>
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["id"] . "</td>";
-                            echo "<td>" . $row["first_name"] . "</td>";
-                            echo "<td>" . $row["last_name"] . "</td>";
-                            echo "<td>" . $row["contact_no"] . "</td>";
-                            echo "<td>" . $row["gender"] . "</td>";
-                            echo "<td>" . $row["test_date"] . "</td>";
-                            echo "<td>" . $row["test_time"] . "</td>";
-                            echo "<td>" . $row["selected_tests"] . "</td>";
-                            echo "<td>" . "Php " . $row["total_amount"] . "</td>";
-                            echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='9'>No records found</td></tr>";
-                    }
-                    ?>
-                </table>
-            </div>
-
-
-
-            <?php
-            $conn->close();
-            ?>
+            
 
 
 

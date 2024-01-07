@@ -337,7 +337,8 @@
     }
 
     .labtest__details{
-        border: 2px solid #c9cbce9f;
+        // border: 2px solid #c9cbce9f;
+        box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
         border-radius: 7px;
         padding: 2rem;
 
@@ -379,7 +380,8 @@
     padding: 20px;
     justify-content: center;
     border-radius: 0.5rem;
-    border: 2px solid #c9cbce9f;
+    // border: 2px solid #c9cbce9f;
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
     width: 62rem;
   
     &__title {

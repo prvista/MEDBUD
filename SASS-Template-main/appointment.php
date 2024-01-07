@@ -112,7 +112,7 @@ $conn->close();
           <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
         </div>
 
-        <div class="header__nav">
+        <div class="header__nav" id="head__red">
           <ul>
             <li><a href="./user_page.php">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -219,7 +219,7 @@ $conn->close();
             <div class="app__banner__text">
               <h2>MedBud Appointment</h2>
               <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
-              <p>Book appointments hassle-free with MedBud's convenient scheduling system. Take control of your health journey by easily securing your appointments online.</p>
+              <p>Book appointments hassle-free with MedBud's convenient scheduling system. Take control of your health journey by easily securing your appointments online</p>
             </div>
           </div>
         </div>
@@ -268,13 +268,12 @@ $conn->close();
 
               <form method="post" action="appointment.php" class="appointment-form">
                 <div class="appointment__wrapper">
-                  <label for="">Name</label>
+                  <label for="first_name">Name:</label>
                   <div class="appointment-name">
-                    <!-- <input type="text" name="first_name" class="app__name" placeholder="First Name">
-                    <input type="text" name="last_name" class="app__name" placeholder="Last Name"> -->
                     <input type="text" name="first_name" placeholder="First Name">
                     <input type="text" name="last_name" placeholder="Last Name">
                   </div>
+                  <label for="">Contact Information:</label>
                   <div class="appointment-contact">
                     <input type="email" name="email" class="form-control" placeholder="Enter Email">
                     <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
@@ -373,11 +372,6 @@ $conn->close();
 
 
   <script>
-
-
-
-
-
     function bookAppointment() {
       var formData = new FormData(document.getElementById('appointmentForm'));
 

@@ -39,7 +39,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
                 </div>
 
-                <div class="header__nav">
+                <div class="header__nav" id="head__red">
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -189,13 +189,13 @@ if (!isset($_SESSION['admin_name'])) {
 
 
                         <div class="doctors__list">
-                            <div class="doctors__list__main__title">
-                                <h2>Doctors List</h2>
-                            </div>
                             <div class="doctors__list__wrapper">
                                 <ul>
                                     <div class="doctors__list__title">
                                         <div class="doctors__list__title__text">
+                                            <div class="doctors__list__main__title">
+                                                <h2>Doctors List</h2>
+                                            </div>
                                             <a href="#">
                                                 <h2>All Departments</h2><i class="fa-solid fa-caret-down"></i>
                                             </a>
@@ -240,7 +240,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Consultation Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Fri-Sat &#160; &#160; &#160; 9:15am - 4:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -262,7 +262,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Consultation Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 11:00am - 4:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -284,7 +284,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Consultation Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Wed-Fri &#160; &#160; &#160; 10:00am - 4:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -305,7 +305,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Consultation Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Tues-Fri &#160; &#160; &#160; 9:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -326,7 +326,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 10:00am - 4:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -350,7 +350,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 9:00am - 1:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -375,7 +375,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 10:30am - 2:45pm</h5>
                                                 </div>
                                             </div>
 
@@ -399,7 +399,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Thurs &#160; &#160; &#160; 1:00pm - 5:30pm</h5>
                                                 </div>
                                             </div>
 
@@ -423,7 +423,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Tues-Fri &#160; &#160; &#160; 10:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -446,7 +446,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Wed-Sat &#160; &#160; &#160; 9:00am - 1:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -494,7 +494,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Tues-Thurs &#160; &#160; &#160; 9:00am - 2:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -518,7 +518,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Thurs &#160; &#160; &#160; 10:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -542,7 +542,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 11:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -567,7 +567,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Tues-Fri &#160; &#160; &#160; 9:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -590,7 +590,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 10:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -616,7 +616,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Wed-Sat &#160; &#160; &#160; 9:00am - 4:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -640,7 +640,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Thurs &#160; &#160; &#160; 10:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -664,7 +664,7 @@ if (!isset($_SESSION['admin_name'])) {
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                    <h5>Mon-Wed &#160; &#160; &#160; 9:00am - 3:00pm</h5>
                                                 </div>
                                             </div>
 
@@ -730,8 +730,8 @@ if (!isset($_SESSION['admin_name'])) {
                 <div class="doctor__name__float">
                     <h2>Dr. Aimee Tsai</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Retina</h3>
-                        <p>Consultation hours:</p>
-                        <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -770,7 +770,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Jonathan Coranzo</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>General Anesthesia</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Fri-Sat &#160; 9:15am - 4:00pm</h4>
                 </div>
             </div>
 
@@ -810,7 +810,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Angelica Delgado</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>General Surgery</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160; 11:00am - 4:00pm</h4>
                 </div>
             </div>
 
@@ -850,7 +850,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Hervin Tang</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>IM - Cardiology</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Wed-Fri &#160; 10:00am - 4:00pm</h4>
                 </div>
             </div>
 
@@ -888,7 +888,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Arnel Tolentino</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>ENT-HNS</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Tues-Fri &#160; 9:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -929,7 +929,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Czarina Basco</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>OB-Gyne</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Fri &#160; 10:00am - 4:00pm</h4>
                 </div>
             </div>
 
@@ -967,7 +967,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Elsie Uribino</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Pediatrician</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160; 9:00am - 1:00pm</h4>
                 </div>
             </div>
 
@@ -1005,7 +1005,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Carmel Castro</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Pediatric Medicine</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160;  10:30am - 2:45pm</h4>
                 </div>
             </div>
 
@@ -1083,7 +1083,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Rafael Jason</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Radiology</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Tues-Fri &#160; 10:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1124,7 +1124,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Raymundo Lo</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Pathology</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Wed-Sat &#160; 9:00am - 1:00pm</h4>
                 </div>
             </div>
 
@@ -1207,7 +1207,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Merenisa Usman</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Gastroenterologist</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Tues-Thurs &#160; 9:00am - 2:00pm</h4>
                 </div>
             </div>
 
@@ -1248,7 +1248,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Cecilia Germar</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Psychiatry</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Thurs &#160; 10:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1289,7 +1289,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Maria Yulde</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>General Pediatrics</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160; 11:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1328,7 +1328,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Angela Ong</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Internal Medicine</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Tues-Fri &#160; 9:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1351,7 +1351,7 @@ if (!isset($_SESSION['admin_name'])) {
         </section>
     </div>
 
-    
+
 
     <div class="additional-section-container" id="section17">
         <div class="overlay"></div>
@@ -1368,7 +1368,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Artemio Pilar</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>IM Pulmonology</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160; 10:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1408,7 +1408,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Barbara Pineda</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>General Opthalmology</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Wed-Sat &#160; 9:00am - 4:00pm</h4>
                 </div>
             </div>
 
@@ -1448,7 +1448,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Jose Navarro</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>Neurology - Stroke</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Thurs &#160; 10:00am - 3:00pm</h4>
                 </div>
             </div>
 
@@ -1488,7 +1488,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <h2>Dr. Paulette Dominguez</h2>
                     <h3><i class="fa-solid fa-heart-pulse"></i>IM Metabolism</h3>
                     <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h4>Mon-Wed &#160; 9:00am - 3:00pm</h4>
                 </div>
             </div>
 

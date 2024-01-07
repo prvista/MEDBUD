@@ -1,15 +1,13 @@
 <?php
-
 @include 'config.php';
 
 session_start();
 
-if (!isset($_SESSION['admin_name'])) {
-    // header('location:login_form.php');
+if (!isset($_SESSION['user_name'])) {
+    header('Location: login_form.php');
+    exit();
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +37,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
                 </div>
 
-                <div class="header__nav">
+                <div class="header__nav" id="head__red">
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>

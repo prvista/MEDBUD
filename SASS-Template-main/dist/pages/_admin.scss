@@ -1,3 +1,52 @@
 .admin__top{
     margin-top: 5rem;
 }
+
+.table__app table,
+.labtest__table table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+.table__app th,
+.table__app td,
+.labtest__table th,
+.labtest__table td {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+}
+
+.table__app th,
+.labtest__table th {
+   background-color: #f2f2f2;
+}
+
+.table__app .btn-container,
+.labtest__table .btn-container {
+
+}
+
+.table__app .btn-container button,
+.labtest__table .btn-container button {
+   padding: 8px 15px;
+   cursor: pointer;
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+   margin-top: 10px;
+}
+
+.table__app .btn-container button.save-btn,
+.labtest__table .btn-container button.save-btn {
+   background-color: #5cb85c;
+   color: white;
+}
+
+.table__app .btn-container button.delete-btn,
+.labtest__table .btn-container button.delete-btn {
+   background-color: #d9534f;
+   color: white;
+}
+
+    
