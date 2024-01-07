@@ -155,6 +155,7 @@ body {
   margin: 0 auto;
 }
 
+/* TEXT CONTENT SECTION */
 .text__content {
   background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
 }
@@ -181,6 +182,33 @@ body {
   text-align: center;
   align-items: center;
 }
+.text__content .btn__new {
+  font-weight: bolder;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+  line-height: 1;
+  margin: 10px;
+  color: rgb(2, 50, 112);
+  border: 2px solid rgb(2, 50, 112);
+}
+.text__content .btn__new:hover {
+  background: rgb(2, 50, 112);
+  font-weight: bolder;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.2s ease;
+  line-height: 1;
+  margin: 10px;
+  color: #ffffff;
+  border: 2px solid rgb(2, 50, 112);
+}
 
 @media screen and (max-width: 786px) {
   .text__content .text__content__wrapper {
@@ -188,7 +216,30 @@ body {
     justify-content: center;
     text-align: center;
   }
+  .text__content__text h1 {
+    font-size: 3rem;
+  }
+  .text__content__text span {
+    font-size: 3.5rem;
+  }
+  .text__content__text h3 {
+    font-size: 2.3rem;
+  }
+  .btn__new {
+    font-weight: bolder;
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s ease;
+    line-height: 1;
+    margin: 2px;
+    color: rgb(112, 2, 2);
+    border: 2px solid rgb(2, 50, 112);
+  }
 }
+/* WAVES SECTION */
 .inner-header {
   height: 65vh;
   width: 100%;
@@ -216,6 +267,7 @@ body {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
+/* Animation for different parallax uses */
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
@@ -236,6 +288,7 @@ body {
   animation-duration: 20s;
 }
 
+/* Keyframes for the wave movement */
 @keyframes move-forever {
   0% {
     transform: translate3d(-90px, 0, 0);
@@ -244,6 +297,7 @@ body {
     transform: translate3d(85px, 0, 0);
   }
 }
+/* Responsive styles */
 @media (max-width: 768px) {
   .waves {
     height: 40px;
@@ -259,8 +313,9 @@ body {
 .lower__banner {
   position: relative;
   padding: 2rem 0;
+  padding-bottom: 6.2rem;
   width: 100%;
-  margin: o auto;
+  margin: 0 auto;
   background-color: #f2f6fb;
 }
 .lower__banner__wrapper {
@@ -270,7 +325,7 @@ body {
   grid-template-columns: 2fr 1fr;
   padding: 2rem 0;
   gap: 2rem;
-  max-width: 118rem;
+  max-width: 125rem;
 }
 .lower__banner__title {
   text-align: center;
@@ -279,6 +334,7 @@ body {
 .lower__banner__title h2 {
   font-size: 2.6rem;
   font-weight: 600;
+  padding-top: 6.5rem;
 }
 .lower__banner__title h4 {
   padding: 1.5rem 0;
@@ -295,14 +351,23 @@ body {
   transition: 0.4s ease;
   color: #021263;
   display: flex;
+  height: 23rem;
 }
 .lower__banner .lower__banner__content .lower__banner__item img {
   width: 40%;
-  height: 40%;
+  height: 55%;
+  padding: 1.4rem;
+  filter: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
 }
 .lower__banner .lower__banner__content .lower__banner__item p {
   padding: 1rem;
-  max-width: 90%;
+}
+.lower__banner .lower__banner__content .lower__banner__item .lower__banner__text {
+  padding: 1rem;
+}
+.lower__banner .lower__banner__content .lower__banner__item .lower__banner__text h5 {
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 .lower__banner .lower__banner__opening {
   background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
@@ -344,78 +409,53 @@ body {
 .lower__banner .lower__banner__opening__text a i {
   padding-right: 1rem;
 }
-@media screen and (max-width: 1050px) {
-  .lower__banner .lower__banner {
-    position: relative;
-    padding: 2rem 0;
-    width: 100%;
-    margin: o auto;
-    background-color: #f2f6fb;
-  }
-  .lower__banner .lower__banner__wrapper {
+
+@media screen and (max-width: 1054px) {
+  .lower__banner__wrapper {
     justify-content: center;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     padding: 2rem 0;
     gap: 2rem;
     max-width: 118rem;
   }
-  .lower__banner .lower__banner__title {
+  .lower__banner__title {
     text-align: center;
     color: #2e386b;
   }
-  .lower__banner .lower__banner__title h2 {
+  .lower__banner__title h2 {
     font-size: 2.6rem;
     font-weight: 600;
   }
-  .lower__banner .lower__banner__title h4 {
+  .lower__banner__title h4 {
     padding: 1.5rem 0;
   }
-  .lower__banner .lower__banner .lower__banner__content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .lower__banner .lower__banner .lower__banner__content .lower__banner__item {
-    background: rgb(255, 255, 255);
-    border-radius: 1.2rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -10px;
-    transition: 0.4s ease;
-    color: #021263;
-    display: unset;
-  }
-  .lower__banner .lower__banner .lower__banner__content .lower__banner__item img {
-    width: 40%;
-    height: 40%;
-  }
-  .lower__banner .lower__banner .lower__banner__content .lower__banner__item p {
-    padding: 1rem;
-    max-width: 90%;
-  }
-  .lower__banner .lower__banner .lower__banner__opening {
+  .lower__banner .lower__banner__opening {
     background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
     border-radius: 1.2rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -10px;
     transition: 0.4s ease;
-    color: white;
+    color: rgb(255, 255, 255);
+    width: 50rem;
+    margin: 0 auto;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text {
+  .lower__banner .lower__banner__opening__text {
     padding: 3rem;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text h3 {
+  .lower__banner .lower__banner__opening__text h3 {
     font-weight: 600;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text p {
+  .lower__banner .lower__banner__opening__text p {
     padding: 2rem 0;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text span {
+  .lower__banner .lower__banner__opening__text span {
     background: #ffffff;
     width: 100%;
     height: 0.1rem;
     display: flex;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text a {
+  .lower__banner .lower__banner__opening__text a {
     font-weight: bolder;
     font-size: 14px;
     display: flex;
@@ -427,26 +467,69 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text a:hover {
+  .lower__banner .lower__banner__opening__text a:hover {
     background: #e7ffef;
   }
-  .lower__banner .lower__banner .lower__banner__opening__text a i {
+  .lower__banner .lower__banner__opening__text a i {
     padding-right: 1rem;
   }
+  .lower__banner .lower__banner__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  .lower__banner .lower__banner__content .lower__banner__item {
+    background: rgb(255, 255, 255);
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -10px;
+    transition: 0.4s ease;
+    color: #021263;
+    width: 50rem;
+  }
+  .lower__banner .lower__banner__content .lower__banner__item img {
+    width: 40%;
+    height: 40%;
+  }
+  .lower__banner .lower__banner__content .lower__banner__item p {
+    padding: 1rem;
+    max-width: 90%;
+  }
 }
-.lower__banner .wave {
+@media screen and (max-width: 640px) {
+  .lower__banner .lower__banner__opening {
+    width: 33rem;
+    margin: 0 auto;
+  }
+  .lower__banner .lower__banner__content .lower__banner__item {
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35rem;
+  }
+  .lower__banner .lower__banner__content img {
+    width: 40%;
+    height: 40%;
+  }
+  .lower__banner .lower__banner__content p {
+    padding: 1rem;
+    max-width: 90%;
+  }
+}
+.wave {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: -1;
-  bottom: -130px;
-  transform: scaleY(-1);
+  bottom: -759px;
+  /* transform: scaleY(-1); */
 }
 
 .our__doctors {
   background: #f2f6fb;
-  min-height: 100vh;
+  padding-bottom: 4rem;
 }
 .our__doctors__title {
   text-align: center;
@@ -472,7 +555,7 @@ body {
 .our__doctors__item img {
   width: 100%;
   max-width: 100%;
-  height: 400px;
+  height: 330px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-right-radius: 0.7rem;
@@ -617,6 +700,56 @@ body {
 .about__text .left__about ul li i {
   margin-right: 10px;
   color: rgb(0, 201, 134);
+}
+@media screen and (max-width: 786px) {
+  .about {
+    padding: 5rem 0;
+    max-width: 1065px;
+    margin: 0 auto;
+  }
+  .about__title {
+    color: #2e386b;
+  }
+  .about__title h4 {
+    font-size: 1.3rem;
+    padding-top: 3rem;
+  }
+  .about__title h2 {
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+    font-weight: 600;
+  }
+  .about__title span {
+    width: 7rem;
+    height: 0.1rem;
+    background: black;
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .about__text {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .about__text p {
+    font-size: 1.5rem;
+  }
+  .about__text .left__about {
+    padding: 0 1rem;
+  }
+  .about__text .left__about p {
+    margin-bottom: 2rem;
+  }
+  .about__text .left__about ul li {
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .about__text .left__about ul li i {
+    margin-right: 10px;
+    color: rgb(0, 201, 134);
+  }
 }
 * {
   margin: 0;
@@ -853,34 +986,279 @@ body {
   background-color: #555;
 }
 
-/* REUSABLE */
-.btn__new {
-  font-weight: bolder;
-  font-size: 14px;
-  letter-spacing: 1px;
+.banner {
+  padding: 5rem 0 10rem 0;
+  position: relative;
+  overflow: hidden;
+  background: #f2f6fb;
+}
+.banner #department {
+  padding-top: 10rem;
+}
+.banner .container .btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid transparent;
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s ease;
+  border-radius: 5rem;
+  font-weight: 600;
+  width: 20rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.banner .container .btn.bg--green {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.banner .container .btn.bg--green i {
+  font-size: 1rem;
+  align-items: center;
+}
+.banner .container .banner__wrapper .upper__banner {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.banner .container .banner__wrapper .upper__banner p {
+  color: aquamarine;
+  font-size: 2rem;
+}
+.banner .container .banner__wrapper .upper__banner b {
+  font-size: 3rem;
+}
+.banner .flex__container {
+  width: 100%;
+  height: auto;
+}
+.banner .flex__container .upper__img {
+  display: flex;
+  justify-content: space-between;
+}
+.banner .flex__container .firColumn__box {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.banner .flex__container .firColumn__box .orthopaedics img {
+  width: 15rem;
+}
+.banner .flex__container .firColumn__box .orthopaedics strong {
+  font-size: 90px;
+  font-weight: 800;
+  opacity: 0.2;
   line-height: 1;
+  letter-spacing: -5px;
+  color: #b6b6b6;
+}
+.banner .flex__container .firColumn__box .orthopaedics p {
+  color: rgb(46, 46, 46);
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 0.9rem;
+  font-weight: 400;
+}
+.banner .flex__container .firColumn__box .orthopaedics .descrip__check {
+  display: flex;
+  gap: 7rem;
+}
+.banner .flex__container .firColumn__box .orthopaedics .descrip__check i {
+  color: green;
+  padding-right: 0.5rem;
+}
+.banner .flex__container .firColumn__box .orthopaedics .descrip__check b {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+}
+.banner .flex__container .firColumn__box .dermatologist img {
+  width: 15rem;
+}
+.banner .flex__container .firColumn__box .dermatologist strong {
+  font-size: 90px;
+  font-weight: 800;
+  opacity: 0.2;
+  line-height: 1;
+  letter-spacing: -5px;
+  color: #b6b6b6;
+}
+.banner .flex__container .firColumn__box .dermatologist p {
+  color: rgb(46, 46, 46);
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 0.9rem;
+  font-weight: 400;
+}
+.banner .flex__container .firColumn__box .dermatologist .descrip__check {
+  display: flex;
+  gap: 7rem;
+}
+.banner .flex__container .firColumn__box .dermatologist .descrip__check i {
+  color: green;
+  padding-right: 0.5rem;
+}
+.banner .flex__container .firColumn__box .dermatologist .descrip__check b {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+}
+.banner .flex__container .secColumn__box {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+.banner .flex__container .secColumn__box .surgery img {
+  width: 15rem;
+}
+.banner .flex__container .secColumn__box .surgery strong {
+  font-size: 90px;
+  font-weight: 800;
+  opacity: 0.2;
+  line-height: 1;
+  letter-spacing: -5px;
+  color: #b6b6b6;
+}
+.banner .flex__container .secColumn__box .surgery p {
+  color: rgb(46, 46, 46);
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 0.9rem;
+  font-weight: 400;
+}
+.banner .flex__container .secColumn__box .surgery .descrip__check {
+  display: flex;
+  gap: 7rem;
+}
+.banner .flex__container .secColumn__box .surgery .descrip__check i {
+  color: green;
+}
+.banner .flex__container .secColumn__box .surgery .descrip__check b {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+}
+.banner .flex__container .secColumn__box .surgery .descrip__check i {
+  padding-right: 0.5rem;
+}
+.banner .flex__container .secColumn__box .corona__checkup img {
+  width: 15rem;
+}
+.banner .flex__container .secColumn__box .corona__checkup strong {
+  font-size: 90px;
+  font-weight: 800;
+  opacity: 0.2;
+  line-height: 1;
+  letter-spacing: -5px;
+  color: #b6b6b6;
+}
+.banner .flex__container .secColumn__box .corona__checkup p {
+  color: rgb(46, 46, 46);
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 0.9rem;
+  font-weight: 400;
+}
+.banner .flex__container .secColumn__box .corona__checkup .descrip__check {
+  display: flex;
+  gap: 7rem;
+}
+.banner .flex__container .secColumn__box .corona__checkup .descrip__check i {
+  color: green;
+}
+.banner .flex__container .secColumn__box .corona__checkup .descrip__check b {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+}
+.banner .flex__container .secColumn__box .corona__checkup .descrip__check i {
+  padding-right: 0.5rem;
+}
+.banner .flex__container .flex__box {
+  max-width: 50rem;
+  height: 49rem;
+  margin: 0 auto;
+  background-color: #ffffff;
   margin: 10px;
-  color: rgb(2, 50, 112);
-  border: 2px solid rgb(2, 50, 112);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-between;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
 }
 
-.btn__new:hover {
-  background: rgb(2, 50, 112);
-  font-weight: bolder;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.2s ease;
-  line-height: 1;
-  margin: 10px;
-  color: #ffffff;
-  border: 2px solid rgb(2, 50, 112);
+@media screen and (max-width: 1020px) {
+  .banner {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .banner .container .flex__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .banner .container .flex__container .flex__box {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    height: 63rem;
+  }
+  .banner .container .flex__container .firColumn__box {
+    display: unset;
+  }
+  .banner .container .flex__container .firColumn__box .orthopaedics .descrip__check {
+    display: unset;
+  }
+  .banner .container .flex__container .firColumn__box .dermatologist .descrip__check {
+    display: unset;
+  }
+  .banner .container .flex__container .secColumn__box {
+    display: unset;
+  }
+  .banner .container .flex__container .secColumn__box .surgery .descrip__check {
+    display: unset;
+  }
+  .banner .container .flex__container .secColumn__box .corona__checkup .descrip__check {
+    display: unset;
+  }
+}
+.styled-block {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120%;
+  min-width: 180%;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 30px 45px -30px rgba(36, 204, 255, 0.15);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.our__doctors__link {
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.our__doctors__link a {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #021263;
+  transition: 0.3s ease;
+}
+.our__doctors__link a:hover {
+  text-decoration: underline;
+  transition: 0.3s ease;
 }
 
 .footer {
@@ -1070,7 +1448,7 @@ body {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 790px) {
+@media screen and (max-width: 890px) {
   .footer .container .footer__wrapper {
     display: unset;
     flex-direction: row;
@@ -1222,10 +1600,84 @@ body {
   width: 100%;
   left: 0;
 }
+#header a {
+  transition: color 0.2s ease;
+}
 
 #header.sticky {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  border-top: none;
+  z-index: 1;
+  max-width: 20rem;
+  margin-top: 23px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  margin: 0 auto;
+}
+.dropdown ul {
+  flex-direction: column;
+  display: flex;
+  gap: unset;
+  transform: translateX(140px) translateY(22px);
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+.dropdown li {
+  display: block;
+}
+.dropdown li:last-child {
+  margin-bottom: 0;
+}
+.dropdown a {
+  display: block;
+  padding: 8px 10px;
+  color: #333;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  background-color: #e6e6e6;
+  color: black;
+}
+
+.navi:nth-child(4) .dropdown {
+  left: 26.5%;
+  transform: translateX(-20%);
+}
+
+.navi:hover .dropdown {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.active {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout__btn a {
+  padding: 0.7rem 3rem;
+  border-radius: 2rem;
+  border: 1.8px solid rgb(2, 50, 112);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: rgb(2, 50, 112);
+  transition: 0.4s ease;
+}
+.logout__btn a:hover {
+  background: rgb(2, 50, 112);
+  color: #ffffff;
+  transition: 0.4s ease;
 }
 
 @media screen and (max-width: 786px) {
@@ -1246,7 +1698,7 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-top: 5rem;
-    gap: 1rem;
+    gap: 3rem;
     justify-content: unset;
     width: 100%;
   }
@@ -1298,58 +1750,34 @@ body {
   .header .branding img {
     width: 10rem;
   }
+  .logout__btn {
+    display: none;
+  }
+  .dropdown ul {
+    flex-direction: column;
+    display: flex;
+    gap: unset;
+    transform: translateX(80px) translateY(52px);
+  }
+  .dropdown li {
+    display: block;
+  }
+  .dropdown li:last-child {
+    margin-bottom: 0;
+  }
+  .dropdown a {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  .dropdown a:hover {
+    background-color: #e6e6e6;
+    color: black;
+  }
 }
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-top: none;
-  z-index: 1;
-  max-width: 20rem;
-  margin-top: 23px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(40px);
-  transition: opacity 0.3s ease, transform 0.5s ease;
-}
-.dropdown ul {
-  flex-direction: column;
-  gap: unset;
-}
-.dropdown li {
-  display: block;
-}
-.dropdown li:last-child {
-  margin-bottom: 0;
-}
-.dropdown a {
-  display: block;
-  padding: 8px 10px;
-  color: #333;
-  text-decoration: none;
-}
-.dropdown a:hover {
-  background-color: #e6e6e6;
-  color: black;
-}
-
-.navi:nth-child(4) .dropdown {
-  left: 56.5%;
-  transform: translateX(-50%);
-}
-
-.navi:hover .dropdown {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.active {
-  background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.head__red a:hover {
+  color: red;
 }
 
 .doctors__wrapper {
@@ -1489,6 +1917,8 @@ table {
   background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
   width: 100%;
   max-width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 .doctors__top__nav__wrapper {
   display: flex;
@@ -1682,9 +2112,11 @@ table {
 .additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float h5 {
   font-size: 2rem;
   align-items: center;
+  display: flex;
 }
 .additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float h5 i {
   font-size: 1.5rem;
+  margin-right: 0.3rem;
 }
 .additional-section-container .additional-section .doctor__contact-pf__float .doctor__contact__float p {
   font-size: 1.3rem;
@@ -1960,6 +2392,204 @@ table {
   margin-top: 20px;
 }
 
+.features--shape {
+  bottom: 6px;
+  width: 100%;
+  fill: #fff;
+  filter: drop-shadow(0 -25px 15px rgba(45, 53, 71, 0.03));
+  background: #00a2ae;
+}
+
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background-image: linear-gradient(rgba(83, 255, 140, 0.7), rgba(34, 229, 255, 0.7)), url(../components/img/bluebar.svg);
+  background-position: center;
+}
+.process .process__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.process .process__wrapper .process__description .process__text b {
+  font-size: 3rem;
+}
+.process .process__wrapper .process__description .process__text p {
+  font-size: 1.7rem;
+  color: white;
+  margin-top: 2rem;
+  font-weight: 500;
+  width: 49rem;
+}
+.process .process__wrapper .process__description .process__text .btn__process {
+  padding: 1rem 1.5rem;
+  border: 1px solid transparent;
+  display: inline-block;
+  border-radius: 1rem;
+  font-weight: 600;
+  width: 20rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.process .process__wrapper .process__description .process__text .btn__process i {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 0.3rem;
+}
+.process .process__wrapper .process__description .process__text .btn__process.bg--green {
+  background: white;
+  color: #000000;
+}
+.process .process__wrapper .flex__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+}
+.process .process__wrapper .flex__wrapper .flex__box {
+  width: 17rem;
+  height: 20rem;
+  background-color: #fafefe;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  align-items: center;
+  border: 1px solid rgb(12, 184, 182);
+  border-radius: 1rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .appointment {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.process .process__wrapper .flex__wrapper .flex__box .appointment img {
+  width: 10rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .appointment b {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .doctor {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.process .process__wrapper .flex__wrapper .flex__box .doctor img {
+  width: 9.8rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .doctor b {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .consultation {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.process .process__wrapper .flex__wrapper .flex__box .consultation img {
+  width: 9.5rem;
+}
+.process .process__wrapper .flex__wrapper .flex__box .consultation b {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 790px) {
+  .process {
+    padding: unset;
+  }
+  .process .process__wrapper {
+    display: unset;
+  }
+  .process .process__wrapper .process__description .process__text b {
+    font-size: 3rem;
+  }
+  .process .process__wrapper .process__description .process__text p {
+    font-size: 1.5rem;
+  }
+  .process .process__wrapper .process__description .process__text .btn {
+    margin-top: 2rem;
+  }
+  .process .process__wrapper .flex__wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .process .process__wrapper .flex__wrapper .flex__box {
+    margin: unset;
+    width: auto;
+    margin-top: 1.5rem;
+  }
+  .process .process__wrapper .flex__wrapper .flex__box .appointment {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+  .process .process__wrapper .flex__wrapper .flex__box .doctor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+  .process .process__wrapper .flex__wrapper .flex__box .consultation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+}
+.bottom__slider {
+  margin: 0 auto;
+}
+.bottom__slider .bottom__slider__wrapper {
+  display: flex;
+  width: 4500px;
+  animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px);
+  }
+}
+.bottom__slider .bottom__slider__wrapper .bottom__slide {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.bottom__slider .bottom__slider__wrapper .bottom__slide img {
+  width: 60%;
+}
+
+.doctors__list {
+  max-width: 100%;
+}
 .doctors__list__main__title {
   padding: 0 2rem 2rem 0;
 }
@@ -1968,8 +2598,8 @@ table {
   font-weight: 600;
 }
 .doctors__list__wrapper {
-  border-radius: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
 }
 .doctors__list ul .doctors__list__title {
   padding: 1.5rem;
@@ -2005,7 +2635,7 @@ table {
   padding: 1rem;
 }
 .doctors__list ul li .doctors__list__container img {
-  width: 5rem;
+  width: 8.3rem;
   border-radius: 0.5rem;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__name {
@@ -2021,7 +2651,7 @@ table {
   display: flex;
 }
 .doctors__list ul li .doctors__list__container .doctors__list__name h6 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   display: flex;
   font-weight: 500;
   color: rgb(184, 184, 184);
@@ -2081,7 +2711,7 @@ table {
 }
 
 .doc__banner {
-  background-image: url(../components/img/doctor--bg.jpg);
+  background-image: url(../components/img/doctors-hands-holding-medical-care-objects.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2111,10 +2741,10 @@ table {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   justify-content: center;
   display: flex;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
 }
 .appointment__form__title h3 {
   font-weight: 600;
@@ -2163,7 +2793,7 @@ table {
 .appointment-message textarea:focus,
 .appointment-doctor select:focus,
 .appointment-doctor input:focus {
-  border-color: #66b3ff;
+  border-color: #00d87e;
   box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
 }
 
@@ -2204,9 +2834,11 @@ table {
 
 .appointment-button button {
   padding: 8px 20px;
-  border-radius: 4px;
+  border-radius: 30px;
   margin-left: 5px;
   cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 15px;
 }
 
 .btn-outline-secondary {
@@ -2229,6 +2861,33 @@ table {
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+
+.app__banner {
+  background-image: url(../components/img/cup-coffee-with-stethoscope-clipboard-pills-desk.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+.app__banner__wrapper .app__banner__text {
+  padding: 1rem;
+}
+.app__banner__wrapper .app__banner__text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.app__banner__wrapper .app__banner__text h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.app__banner__wrapper .app__banner__text p {
+  font-weight: 500;
+  width: 80rem;
+  padding: 1rem;
+  font-size: 1.7rem;
 }
 
 .dashboard__wrapper {
@@ -2383,7 +3042,6 @@ table {
 .dashboard__banner__wrapper .dashboard__banner__text h3 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
 }
 .dashboard__banner__wrapper .dashboard__banner__text p {
   font-weight: 500;
@@ -2403,6 +3061,10 @@ table {
 .appointment__details {
   border: 2px solid rgba(201, 203, 206, 0.6235294118);
   border-radius: 7px;
+}
+.appointment__details__wrapper h2 {
+  font-size: 1.8rem;
+  padding: 0.5rem;
 }
 .appointment__details__information .appointment__details__information__date-time {
   padding: 1rem;
@@ -2452,12 +3114,6 @@ table {
   font-size: 1.7rem;
 }
 
-.lab__details__title h2 {
-  padding: 2rem 2rem 1rem 2rem;
-  font-weight: 600;
-  font-size: 2.5rem;
-}
-
 .labtest__wrapper {
   padding: 1rem;
 }
@@ -2470,13 +3126,20 @@ table {
   border: 2px solid rgba(201, 203, 206, 0.6235294118);
   border-radius: 7px;
   padding: 1.5rem;
+  transition: 0.2s ease;
+}
+.labtest__item:hover {
+  background: rgb(243, 243, 243);
+  transition: 0.2s ease;
+  cursor: pointer;
 }
 .labtest__item__status h2 {
   font-size: 1.2rem;
   font-weight: 500;
-  border: 2px solid rgba(201, 206, 202, 0.6235294118);
-  max-width: 101px;
+  border: 2px solid rgba(228, 230, 228, 0.6235294118);
+  max-width: 121px;
   padding: 0.5rem;
+  text-align: center;
 }
 .labtest__item__title {
   height: 15rem;
@@ -2509,4 +3172,591 @@ table {
   font-size: 1.3rem;
   font-weight: 500;
   color: white;
+}
+
+.cart__container {
+  position: absolute;
+  background: #f7f7f7;
+  top: 0;
+  right: -100rem;
+  height: 100vh;
+  width: 42%;
+  transition: 0.5s ease;
+  border-top-left-radius: 0.5rem;
+  padding-top: 20px;
+  z-index: 9999;
+  margin-top: 3rem;
+}
+.cart__container.open {
+  right: 0;
+  transition: 0.5s ease;
+  overflow: scroll;
+}
+.cart__container .cart-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.cart__container .cart-content {
+  padding: 2rem;
+}
+.cart__container .cart__nav__head {
+  text-align: center;
+}
+.cart__container .cart__nav__head h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.cart__container .cart-items {
+  color: rgb(100, 100, 100);
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 1rem;
+  line-height: 4.5rem;
+  border-top: 1px solid #ddd;
+}
+.cart__container .cart-total {
+  padding: 1rem;
+  font-weight: 500;
+  color: rgb(0, 66, 25);
+  font-size: 1.8rem;
+  border-top: 1px solid #ddd;
+}
+.cart__container .cart-items-total {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.cart__container .cart-btn {
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.cart__container .cart-btn .cart-clear {
+  background: #333;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.7rem 3rem;
+}
+.cart__container .cart-btn .booking-test {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.7rem 3rem;
+}
+
+.sidebar-nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.sidebar-nav ul li {
+  font-size: 1.7rem;
+  font-weight: 600;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+.lab__details__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+}
+.lab__details__title h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.lab__details__title a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-right: 2rem;
+}
+.lab__details__title a i {
+  color: rgb(0, 61, 85);
+  font-size: 1.9rem;
+}
+
+.white--clr {
+  color: #ffffff;
+}
+.white--clr h2 {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.labtest__overflow {
+  overflow-x: hidden;
+}
+
+.labtest__form__split {
+  display: flex;
+  justify-content: space-around;
+}
+.labtest__form .labtest__details {
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  border-radius: 7px;
+  padding: 2rem;
+}
+.labtest__form .labtest__details__title {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+.labtest__form .labtest__details__title h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.labtest__form .labtest__details .selected-tests {
+  margin-top: 1rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
+.labtest__form .labtest__details .cart-total {
+  border-top: 1px solid rgb(187, 187, 187);
+  margin-top: 5rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.labtest__form .labtest__details .cart-total .total-amount {
+  font-weight: 600;
+  color: #00351f;
+}
+
+.lab-form {
+  padding: 20px;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(201, 203, 206, 0.6235294118);
+  width: 62rem;
+}
+.lab-form__title {
+  margin-bottom: 20px;
+}
+.lab-form__title h3 {
+  color: #333;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.lab-form .labtest__name input[type=text] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.lab-form .labtest__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lab-form .labtest__info select,
+.lab-form .labtest__info input[type=text],
+.lab-form .labtest__info input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.lab-form .labtest__sched-date {
+  display: flex;
+  gap: 10px;
+}
+.lab-form .labtest__sched-date input[type=date],
+.lab-form .labtest__sched-date input[type=time] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.lab-form .labtest__type {
+  display: flex;
+  flex-direction: column;
+}
+.lab-form .labtest__type select,
+.lab-form .labtest__type input[type=text] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.lab-form .labtest__btn {
+  padding-top: 2rem;
+  justify-content: flex-end;
+  display: flex;
+}
+.lab-form .labtest__btn a {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.7rem 2rem;
+}
+.lab-form .labtest__btn a:first-child {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+.lab-form .labtest__btn a:first-child:hover {
+  background: #333;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.lab-form .labtest__btn a:last-child {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+.lab-form .labtest__name input[type=text]:focus,
+.lab-form .labtest__info select:focus,
+.lab-form .labtest__info input[type=text]:focus,
+.lab-form .labtest__info input[type=tel]:focus,
+.lab-form .labtest__sched-date input[type=date]:focus,
+.lab-form .labtest__sched-date input[type=time]:focus,
+.lab-form .labtest__type select:focus {
+  border-color: #00d87e;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+}
+
+.admin__top {
+  margin-top: 5rem;
+}
+
+.med__banner {
+  background-image: url(../components/img/flat-lay-health-still-life-arrangement-with-copy-space.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+.med__banner__wrapper .med__banner__text {
+  padding: 1rem;
+}
+.med__banner__wrapper .med__banner__text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.med__banner__wrapper .med__banner__text h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.med__banner__wrapper .med__banner__text p {
+  font-weight: 500;
+  width: 80rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.patient__form {
+  font-weight: bold;
+  position: relative;
+  border-radius: 0.5rem;
+  border-color: #00d87e;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 3rem;
+}
+.patient__form h2 {
+  font-size: 2.5rem;
+}
+.patient__form span {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(208, 208, 208);
+}
+.patient__form .info_title {
+  margin: 0 auto;
+}
+.patient__form .patient__form__container {
+  padding: 3rem;
+  margin: 0 auto;
+}
+.patient__form .patient__form__container .patient__form__wrapper {
+  width: 100%;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form {
+  display: flex;
+  flex-direction: column;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation {
+  display: flex;
+  flex-direction: column;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation select {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation label {
+  font-weight: lighter;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::-moz-placeholder {
+  font-family: "montserrat";
+  font-weight: 600;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::placeholder {
+  font-family: "montserrat";
+  font-weight: 600;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input:focus {
+  outline: none;
+  border-color: #00d87e;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype {
+  display: flex;
+  flex-direction: column;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age select, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype select {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age select:focus, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype select:focus {
+  outline: none;
+  border-color: #00d87e;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .first__emer__contact, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .second__emer__contact {
+  padding-left: 2rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info {
+  display: block;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info label {
+  font-weight: lighter;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info .medical__condition, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info .allergies {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  resize: none;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn .input__submit {
+  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn .input__cancel {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: small;
+}
+
+@media screen and (min-width: 980px) {
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype {
+    display: flex;
+    flex-direction: unset;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age input, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype input {
+    width: 20rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age select, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype select {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    width: 20rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .first__emer__contact, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .second__emer__contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .patient__form .patient__form__container {
+    padding: 3rem;
+    margin: 0 auto;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper {
+    width: 100%;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation {
+    display: flex;
+    flex-direction: column;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation label {
+    font-weight: lighter;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::-moz-placeholder {
+    font-family: "montserrat";
+    font-weight: 600;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .input_isolation input::placeholder {
+    font-family: "montserrat";
+    font-weight: 600;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype {
+    display: flex;
+    flex-direction: unset;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age input, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype input {
+    width: 20rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .date__age select, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .personal__info .gender__bloodtype select {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    width: 20rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .first__emer__contact, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .emergency__contact .second__emer__contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info {
+    display: block;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info label {
+    font-weight: lighter;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info .medical__condition, .patient__form .patient__form__container .patient__form__wrapper .patient__input form .health__info .allergies {
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    resize: none;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn .input__submit {
+    background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .patient__form .patient__form__container .patient__form__wrapper .patient__input form .submit__btn .input__cancel {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: small;
+  }
+}
+.table__top__space {
+  margin-top: 3rem;
+}
+
+.table__app table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table__app th,
+.table__app td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.table__app th {
+  background-color: #f2f2f2;
+}
+
+.labtest__table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.labtest__table th,
+.labtest__table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.labtest__table th {
+  background-color: #f2f2f2;
 }/*# sourceMappingURL=main.css.map */

@@ -42,20 +42,15 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
 
                 <div class="header__nav">
-                    <ul>
+                    <ul class="head__red">
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="">MedTips</a></li>
 
                         <li class="navi">
-                            <a href="#service" class="place">Services <i class="fa-solid fa-caret-down"></i></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="./appointment.php">Book Appointment</a></li>
-                                    <li><a href="#">Medical Records</a></li>
-                                </ul>
-                            </div>
+                            <a href="#service" class="place">Services</a>
                         </li>
+                        <li><a href="">MedTips</a></li>
+
 
                         <li><a href="">Contact</a></li>
                     </ul>
@@ -140,9 +135,8 @@ if (!isset($_SESSION['admin_name'])) {
                 <div class="container">
                     <div class="dashboard__banner__wrapper">
                         <div class="dashboard__banner__text">
-                            <h2>Welcome!</h2>
-                            <h3><?php echo $_SESSION['user_name'] ?></h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint ullam saepe laboriosam nihil iusto ipsum impedit temporibus aspernatur. Nulla!</p>
+                            <h2>Welcome! <?php echo $_SESSION['user_name'] ?></h2>
+                            <p>Manage your health efficiently with the MedBud dashboard. Access your medical records, schedule appointments, view test results, and explore personalized health recommendations—all in one place for your convenience.</p>
                         </div>
                     </div>
                 </div>
@@ -150,7 +144,7 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="appointment__details__title">
                 <h2>My Appointments</h2>
-                <a href="./sample.php">DITOOOOOOOOOOOOOOO</a>
+                <!-- <a href="./sample.php">DITOOOOOOOOOOOOOOO</a> -->
             </div>
 
 
@@ -160,11 +154,131 @@ if (!isset($_SESSION['admin_name'])) {
 
                         <div class="appointment__details__information">
                             <div class="appointment__details__information__date-time">
-                                <h2>Appointment Date:</h2>
-                                <h3>Appointment Hour:</h3>
+                                <h2>Booked Appointment</h2>
+                                <!-- <h3>Appointment Hour:</h3> -->
+
+
+                                <?php
+                                $servername = "localhost";
+                                $username = "root"; // Change as per your MySQL credentials
+                                $password = ""; // Change as per your MySQL credentials
+                                $dbname = "doctor_appointments";
+
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                                // Check connection
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                // Initially set variables to display a blank table
+                                $patient = "";
+                                $appointmentDate = "";
+                                $appointmentTime = "";
+                                $consultation = "";
+                                $doctor = "";
+
+                                // Read the latest appointment
+                                $sql = "SELECT * FROM appointments ORDER BY created_at DESC LIMIT 1";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    // Fetch the latest appointment details
+                                    while ($row = $result->fetch_assoc()) {
+                                        $patient = $row["first_name"] . " " . $row["last_name"];
+                                        $appointmentDate = $row["appointment_date"];
+                                        $appointmentTime = $row["appointment_time"];
+                                        $consultation = $row["consultation_type"];
+                                        $doctor = $row["specialization"];
+                                    }
+                                }
+                                ?>
+
+                                <table class="table__app" border="1">
+                                    <tr>
+                                        <th>Patient</th>
+                                        <th>Appointment Date</th>
+                                        <th>Appointment Time</th>
+                                        <th>Consultation</th>
+                                        <th>Doctor</th>
+                                    </tr>
+
+                                    <?php
+                                    if ($patient !== "") { // Display the latest appointment only if it exists
+                                        echo "<tr>";
+                                        echo "<td>" . $patient . "</td>";
+                                        echo "<td>" . $appointmentDate . "</td>";
+                                        echo "<td>" . $appointmentTime . "</td>";
+                                        echo "<td>" . $consultation . "</td>";
+                                        echo "<td>" . $doctor . "</td>";
+                                        echo "</tr>";
+                                    } else {
+                                        echo "<tr><td colspan='5'>No appointments found</td></tr>";
+                                    }
+                                    ?>
+                                </table>
+
+                                <?php
+                                $conn->close();
+                                ?>
+
+
+
+
+                                <h2>Booked Laboratory Test</h2>
+                                <?php
+                                $servername = "localhost";
+                                $username = "root"; // Change as per your MySQL credentials
+                                $password = ""; // Change as per your MySQL credentials
+                                $dbname = "labtest_db";
+
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                                // Check connection
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                $sql = "SELECT * FROM lab_tests ORDER BY id DESC LIMIT 1"; // Fetching the latest record
+                                $result = $conn->query($sql);
+                                ?>
+
+                                <style>
+                                    /* Include your CSS styles here for table formatting */
+                                </style>
+
+                                <div class="labtest__table">
+                                    <table>
+                                        <tr>
+                                            <th>Patient</th>
+                                            <th>Selected Test</th>
+                                            <th>Appointment Date</th>
+                                            <th>Appointment Time</th>
+                                        </tr>
+                                        <?php
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                echo "<tr>";
+                                                echo "<td>" . $row["first_name"] . " " . $row["last_name"] . "</td>";
+                                                echo "<td>" . $row["selected_tests"] . "</td>";
+                                                echo "<td>" . $row["test_date"] . "</td>";
+                                                echo "<td>" . $row["test_time"] . "</td>";
+                                                echo "</tr>";
+                                            }
+                                        } else {
+                                            echo "<tr><td colspan='3'>No records found</td></tr>";
+                                        }
+                                        ?>
+                                    </table>
+                                </div>
+
+                                <?php
+                                $conn->close();
+                                ?>
+
                             </div>
 
-                            <div class="appointment__details__type">
+                            <!-- <div class="appointment__details__type">
                                 <h2>
                                     High Blood
                                 </h2>
@@ -174,13 +288,15 @@ if (!isset($_SESSION['admin_name'])) {
                                 <h2>Dr. Reinier</h2>
                                 <h3>Online Consultation</h3>
                             </div>
+
+                            <div class="appointment__information__status">
+                                <h2>
+                                    Approved
+                                </h2>
+                            </div> -->
                         </div>
 
-                        <div class="appointment__information__status">
-                            <h2>
-                                Approved
-                            </h2>
-                        </div>
+
 
                     </div>
                 </div>

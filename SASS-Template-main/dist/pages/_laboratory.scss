@@ -29,13 +29,6 @@
     }
 }
 
-.lab__details__title{
-    h2{
-        padding: 2rem 2rem 1rem 2rem;
-        font-weight: 600;
-        font-size: 2.5rem;
-    }
-}
 
 
 
@@ -55,14 +48,22 @@
         border: 2px solid #c9cbce9f;
         border-radius: 7px;
         padding: 1.5rem;
+        transition: 0.2s ease;
+
+        &:hover{
+            background: rgb(243, 243, 243);
+            transition: 0.2s ease;
+            cursor: pointer;    
+        }
+        
         &__status{
             h2{
                 font-size: 1.2rem;
                 font-weight: 500;
-                border: 2px solid #c9ceca9f;
-                max-width: 101px;
+                border: 2px solid #e4e6e49f;
+                max-width: 121px;
                 padding: 0.5rem;
-
+                text-align: center;
             }
         }
         &__title{
@@ -106,3 +107,395 @@
         }
     }
 }
+
+
+// .sidenav {
+//     height: 100%;
+//     width: 250px;
+//     position: fixed;
+//     top: 0;
+//     left: -250px;
+//     background-color: #f4f4f4;
+//     overflow-x: hidden;
+//     transition: 0.3s;
+//     padding-top: 60px;
+//   }
+
+//   .sidenav a {
+//     padding: 8px 8px 8px 32px;
+//     text-decoration: none;
+//     font-size: 18px;
+//     color: black;
+//     display: block;
+//     transition: 0.3s;
+//   }
+
+//   .sidenav a:hover {
+//     color: #f44336;
+//   }
+
+//   .sidenav-btn {
+//     position: absolute;
+//     top: 20px;
+//     left: 10px;
+//     cursor: pointer;
+//   }
+
+//   .labtest__item {
+//     /* Your styles for lab test item */
+//     border: 1px solid #ccc;
+//     margin-bottom: 20px;
+//     padding: 20px;
+//   }
+
+//   .labtest__item__title h2 {
+//     margin-bottom: 5px;
+//   }
+
+//   .labtest__item__price h3 {
+//     color: green;
+//   }
+
+//   .labtest__item__btn a {
+//     text-decoration: none;
+//     background-color: #007bff;
+//     color: white;
+//     padding: 5px 10px;
+//     border-radius: 5px;
+//   }
+
+
+
+.cart__container {
+    position: absolute;
+    background: #f7f7f7;
+    top: 0;
+    right: -100rem;
+    // left: -100rem;
+    height: 100vh;
+    width: 42%;
+    transition: 0.5s ease;
+    border-top-left-radius: 0.5rem;
+    padding-top: 20px;
+    z-index: 9999;
+    margin-top: 3rem;
+
+    &.open {
+        right: 0;
+        // left: 0;
+        transition: 0.5s ease;
+        overflow: scroll;
+    }
+
+    .cart-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 2.5rem;
+        
+    }
+
+    .cart-content{
+        padding: 2rem;
+    }
+
+    .cart__nav__head{
+        text-align: center;
+        h2{
+            font-size: 2.3rem;
+            font-weight: 600;
+        }
+    }
+
+    .cart-items{
+        color: rgb(100, 100, 100);
+        font-size: 1.7rem;
+        font-weight: 500;
+        padding: 1rem;
+        line-height: 4.5rem;
+        border-top: 1px solid #ddd;
+        
+    }
+
+    .cart-total{
+        padding: 1rem;
+        font-weight: 500;
+        color: rgb(0, 66, 25);
+        font-size: 1.8rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .cart-items-total{
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-btn{
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+        .cart-clear{
+            background: #333;
+            color: white;
+            font-size: 1.6rem;
+            padding: 0.7rem 3rem;
+        }
+
+        .booking-test{
+            background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+            color: white;
+            font-size: 1.6rem;
+            padding: 0.7rem 3rem;
+        }
+    }
+
+}
+
+.sidebar-nav{
+    ul{
+        // border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: flex-end;
+        li{
+            font-size: 1.7rem;
+            font-weight: 600;
+            background: linear-gradient(
+                    60deg,
+                    rgb(116, 214, 149) 0%,
+                    rgb(58, 200, 219) 100%);
+            padding: 1rem;
+            border-radius: 2rem;
+            
+            a{
+                
+            }
+            
+
+        }
+    }
+}
+
+.lab__details__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem 2rem;
+
+    h2{
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+
+    a{
+        font-size: 1.5rem;
+        font-weight: 600;
+        background: linear-gradient(
+                60deg,
+                rgb(116, 214, 149) 0%,
+                rgb(58, 200, 219) 100%);
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-right: 2rem;
+
+        i{
+            color: rgb(0, 61, 85);
+            font-size: 1.9rem
+        };
+    }
+}
+
+
+
+.white--clr{
+    color: #ffffff;
+    h2{
+        border: 2px solid rgb(255, 255, 255);
+    }
+}
+
+
+.labtest__overflow{
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+// LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB TEEEEEEEEEEEEEEEEEEEEEEEEEEEESSTTTTTTTTTTTTT
+.labtest__form{
+    &__wrapper{
+        
+    }
+
+    &__split{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .labtest__details{
+        border: 2px solid #c9cbce9f;
+        border-radius: 7px;
+        padding: 2rem;
+
+        &__title{
+            text-align: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgb(187, 187, 187);
+            h2{
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+        }
+
+        .selected-tests{
+            margin-top: 1rem;
+            line-height: 3.5rem;
+            font-weight: 400;
+        }
+
+        .cart-total{
+            border-top: 1px solid rgb(187, 187, 187);
+            margin-top: 5rem;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            .total-amount{
+                font-weight: 600;
+                color: #00351f;
+            }
+        }
+    }
+}
+
+
+
+
+
+.lab-form {
+    padding: 20px;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 2px solid #c9cbce9f;
+    width: 62rem;
+  
+    &__title {
+      margin-bottom: 20px;
+  
+      h3 {
+        color: #333;
+        font-weight: 600;
+        font-size: 2.5rem;
+      }
+    }
+  
+    .labtest__name input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+  
+    .labtest__info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      select,
+      input[type="text"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 5px;
+      }
+    }
+  
+    .labtest__sched-date {
+      display: flex;
+      gap: 10px;
+  
+      input[type="date"],
+      input[type="time"] {
+        width: 100%;
+        padding: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 5px;
+      }
+    }
+  
+    .labtest__type {
+      display: flex;
+      flex-direction: column;
+  
+      select,
+      input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 5px;
+      }
+    }
+  
+    .labtest__btn {
+      padding-top: 2rem;
+      justify-content: flex-end;
+      display: flex;
+  
+      a {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 0.7rem 2rem;
+  
+        &:first-child {
+          background-color: transparent;
+          color: #333;
+          border: 1px solid #333;
+          border-radius: 2rem;
+          margin-right: 5px;
+          transition: 0.3s ease;
+
+          &:hover{
+            background: #333;
+            color: #ffffff;
+            transition: 0.3s ease;
+          }
+        }
+  
+        &:last-child {
+          background: linear-gradient(
+            60deg,
+            rgb(116, 214, 149) 0%,
+            rgb(58, 200, 219) 100%
+          );
+          color: #fff;
+          border: none;
+          font-weight: 600;
+          border-radius: 2rem;
+        }
+      }
+    }
+  
+    .labtest__name input[type="text"]:focus,
+    .labtest__info select:focus,
+    .labtest__info input[type="text"]:focus,
+    .labtest__info input[type="tel"]:focus,
+    .labtest__sched-date input[type="date"]:focus,
+    .labtest__sched-date input[type="time"]:focus,
+    .labtest__type select:focus {
+      border-color: #00d87e;
+      box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+    }
+  }
+  

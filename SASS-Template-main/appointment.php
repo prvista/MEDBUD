@@ -17,9 +17,9 @@ $doctorName = isset($_GET['doctor']) ? $_GET['doctor'] : 'No Doctor';
 
 <?php
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "doctor_appointments"; 
+$username = "root";
+$password = "";
+$dbname = "doctor_appointments";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -116,11 +116,12 @@ $conn->close();
           <ul>
             <li><a href="./user_page.php">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="">MedTips</a></li>
 
             <li class="navi">
               <a href="#service" class="place">Services </a>
             </li>
+            <li><a href="">MedTips</a></li>
+
 
             <li><a href="">Contact</a></li>
           </ul>
@@ -139,7 +140,7 @@ $conn->close();
     </div>
   </header>
 
-  <section class="appointment__banner appointment--bg">
+  <!-- <section class="appointment__banner appointment--bg">
     <div class="container">
       <div class="appointment__banner__wrapper">
         <div class="appointment__banner__text">
@@ -151,14 +152,87 @@ $conn->close();
         </div>
       </div>
     </div>
+  </section> -->
+
+  <section class="dashboard">
+    <div class="dashboard__wrapper">
+      <div class="dashboard__content">
+        <div class="dashboard__nav">
+          <div class="dashboard__name">
+            <h2><?php echo $_SESSION['user_name'] ?></h2>
+            <h5>Patient</h5>
+          </div>
+
+          <div class="dashboard__side__nav">
+            <h4>CATEGORIES</h4>
+            <ul>
+              <li><a href="./dashboard.php"><i class="fa-regular fa-bookmark"></i>Dashboard</a></li>
+              <span></span>
+              <li><a href="./medical_record.php"><i class="fa-solid fa-notes-medical"></i>Medical Record</a></li>
+              <span></span>
+              <li><a href="./doctor.php"><i class="fa-solid fa-user-doctor"></i>All Doctors</a></li>
+              <span></span>
+              <li><a href="#"><i class="fa-regular fa-calendar"></i>Schedule Appointment</a></li>
+              <span></span>
+              <li><a href="./laboratory.php"><i class="fa-solid fa-flask-vial"></i>Laboratory Tests</a></li>
+              <div class="lower__buttons">
+                <a href="./login_form.php">
+                  <button class="logout__btn__animation">
+
+                    <div class="sign"><svg viewBox="0 0 512 512">
+                        <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                      </svg></div>
+
+                    <div class="text">Logout</div>
+                  </button>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="users__table">
+
+      <!-- <div class="dashboard__form__title">
+
+        <div class="dashboard__form__title__text">
+          <h3>Doctors</h3>
+        </div>
+
+        <div class="dashboard__date" id="todayDate">
+          <h3>Today's Date</h3>
+          <h4> <?php
+                echo date('F j, Y');
+                ?></h4>
+        </div>
+      </div> -->
+
+
+      <div class="app__banner admin__top">
+        <div class="container">
+          <div class="app__banner__wrapper">
+            <div class="app__banner__text">
+              <h2>MedBud Appointment</h2>
+              <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
+              <p>Book appointments hassle-free with MedBud's convenient scheduling system. Take control of your health journey by easily securing your appointments online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section class="users">
     <div class="users__wrapper">
       <div class="users__content">
-        <div class="users__nav">
+        <!-- <div class="users__nav">
           <div class="users__name">
-            <!-- <h1>Dashboard</h1> -->
             <h2><?php echo $_SESSION['user_name'] ?></h2>
             <h5>Patient</h5>
           </div>
@@ -177,21 +251,10 @@ $conn->close();
               <li><a href="./laboratory.php"><i class="fa-solid fa-flask-vial"></i>Laboratory Tests</a></li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="users__table">
-        <div class="dashboard__form__title">
-          <div class="dashboard__form__title__text">
-            <h3>Dashboard</h3>
-          </div>
 
-          <div class="dashboard__date" id="todayDate">
-            <h3>Today's Date</h3>
-            <h4> <?php
-                  echo date('F j, Y');
-                  ?></h4>
-          </div>
-        </div>
 
 
         <div class="appointment__form__title">
@@ -250,15 +313,34 @@ $conn->close();
 
                   <div class="appointment-doctor">
                     <div class="doctor-name-input">
-                      <input type="text" id="doctorNameInput" placeholder="Doctor's Name" value="" name="doctor_name">
+                      <input type="text" id="doctorNameInput" placeholder="Doctor's Name" value="" name="doctor_name" readonly>
                       <select class="form-select" id="specializationSelect" name="specialization">
                         <option selected disabled>
                           Specialization</option>
-                        <option value="Dr. Czarina Basco - OB-Gyne">OB-Gyne</option>
+                        <option value="Dr. Aimee Tsai - Retina">Retina</option>
                         <option value="Dr. Jonathan Coranzo - General Anesthesia">General Anesthesia</option>
                         <option value="Dr. Angelica Delgado - General Surgery">General Surgery</option>
                         <option value="Dr. Hervin Tang - IM - Cardiology">IM - Cardiology</option>
                         <option value="Dr. Arnel Tolentino - ENT-HNS">ENT-HNS</option>
+                        <option value="Dr. Czarina Basco - OB-Gyne">OB-Gyne</option>
+                        <option value="Dr. Elsie Uribino - Pediatrician">Pediatrician</option>
+                        <option value="Dr. Carmel Castro - Pediatric Medicine">Pediatric Medicine</option>
+                        <option value="Dr. Juding Tang - Dermatology">Dermatology</option>
+                        <option value="Dr. Rafael Jason - Radiology">Radiology</option>
+                        <option value="Dr. Raymundo Lo - Pathology">Pathology</option>
+                        <option value="Dr. Lawrence Sarza - Cardiologist">Cardiologist</option>
+                        <option value="Dr. Merenisa Usman - Gastroenterologist">Gastroenterologist</option>
+                        <option value="Dr. Cecilia Germar - Psychiatry">Psychiatry</option>
+                        <option value="Dr. Maria Yulde - General Pediatrics">General Pediatrics</option>
+                        <option value="Dr. Angela Ong - Internal Medicine">Internal Medicine</option>
+                        <option value="Dr. Artemio Pilar - IM Pulmonology">IM Pulmonology</option>
+                        <option value="Dr. Barbara Pineda - General Opthalmology">General Opthalmology</option>
+                        <option value="Dr. Jose Navarro - Neurology - Stroke">Neurology - Stroke</option>
+                        <option value="Dr. Paulette Dominguez - IM Metabolism">IM Metabolism</option>
+                        <option value="Dr. John Marinas - Urology - Endourology">Urology - Endourology</option>
+
+
+
                       </select>
                     </div>
                   </div>
@@ -282,11 +364,7 @@ $conn->close();
         </div>
         <br>
         <br>
-        <div class="appointment__form__title">
-          <div class="appointment__form__title__text">
-            <h3>Appointment Status</h3>
-          </div>
-        </div>
+
 
 
       </div>
@@ -295,6 +373,11 @@ $conn->close();
 
 
   <script>
+
+
+
+
+
     function bookAppointment() {
       var formData = new FormData(document.getElementById('appointmentForm'));
 

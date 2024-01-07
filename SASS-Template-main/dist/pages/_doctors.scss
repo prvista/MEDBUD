@@ -182,6 +182,8 @@ table {
         rgb(58, 200, 219) 100%);
     width: 100%;
     max-width: 100%;
+    position: fixed;
+    z-index: 999;
     // padding: 0.5rem;
     &__wrapper{
       display: flex;
@@ -402,9 +404,11 @@ table {
         h5{
           font-size: 2rem;
           align-items: center;
+          display: flex;
 
           i{
           font-size: 1.5rem;
+          margin-right: 0.3rem;
           }
         }
 

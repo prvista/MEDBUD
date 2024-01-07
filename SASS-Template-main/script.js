@@ -1,36 +1,77 @@
-// HEADERNAV
 document.addEventListener("DOMContentLoaded", function () {
-
     var header = document.getElementById("header");
-  
-
     var sticky = header.offsetTop;
-  
 
     function stickyHeader() {
         var burgerBtn = document.querySelector(".burger__btn");
+        var anchors = document.querySelectorAll("#header a:not(.logout__btn a)");
+
         if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
             burgerBtn.classList.add("sticky");
 
             burgerBtn.querySelectorAll("span").forEach(function (span) {
-                span.style.backgroundColor = "#808080"; 
+                span.style.backgroundColor = "#808080";
+            });
+
+            anchors.forEach(function (anchor) {
+                anchor.classList.add("scrolled");
             });
         } else {
             header.classList.remove("sticky");
             burgerBtn.classList.remove("sticky");
- 
+
             burgerBtn.querySelectorAll("span").forEach(function (span) {
-                span.style.backgroundColor = ""; 
+                span.style.backgroundColor = "";
+            });
+
+            anchors.forEach(function (anchor) {
+                anchor.classList.remove("scrolled");
             });
         }
     }
-  
+
+    function changeHoverColorOnScroll() {
+        var isSticky = header.classList.contains("sticky");
+        var anchors = document.querySelectorAll("#header a:not(.logout__btn a)");
+
+        anchors.forEach(function (anchor) {
+            anchor.addEventListener("mouseenter", function () {
+                if (isSticky) {
+                    anchor.style.color = "red"; // Change anchor color to red on hover when scrolled
+                } else {
+                    anchor.style.color = "white"; // Change anchor color to white on hover when at the top
+                }
+            });
+
+            anchor.addEventListener("mouseleave", function () {
+                if (isSticky) {
+                    anchor.style.color = ""; // Revert anchor color back to default when not hovered
+                } else {
+                    anchor.style.color = ""; // Revert anchor color back to default when not hovered at the top
+                }
+            });
+        });
+
+        // Targeting the logout__btn anchor separately
+        var logoutAnchor = document.querySelector(".logout__btn a");
+
+        logoutAnchor.addEventListener("mouseenter", function () {
+            logoutAnchor.style.color = "white"; // Change logout anchor color to white on hover
+        });
+
+        logoutAnchor.addEventListener("mouseleave", function () {
+            logoutAnchor.style.color = ""; // Revert logout anchor color back to default when not hovered
+        });
+    }
 
     window.addEventListener("scroll", function () {
         stickyHeader();
+        changeHoverColorOnScroll();
     });
-  });
+});
+
+
 
 
 //   header__btn

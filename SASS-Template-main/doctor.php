@@ -43,12 +43,11 @@ if (!isset($_SESSION['admin_name'])) {
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="">MedTips</a></li>
 
                         <li class="navi">
                             <a href="#service" class="place">Services </a>
                         </li>
-
+                        <li><a href="">MedTips</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
                 </div>
@@ -126,27 +125,27 @@ if (!isset($_SESSION['admin_name'])) {
 
         <div class="users__table">
 
-            <div class="dashboard__form__title">
+            <!-- <div class="dashboard__form__title">
                 <div class="dashboard__form__title__text">
                     <h3>Doctors</h3>
                 </div>
 
-                <!-- <div class="dashboard__date" id="todayDate">
+                <div class="dashboard__date" id="todayDate">
                     <h3>Today's Date</h3>
                     <h4> <?php
                             echo date('F j, Y');
                             ?></h4>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
 
-            <div class="doc__banner">
+            <div class="doc__banner admin__top">
                 <div class="container">
                     <div class="doc__banner__wrapper">
                         <div class="doc__banner__text">
                             <h2>MedBud Doctors</h2>
                             <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel minus in, quos perferendis nam quas reiciendis impedit maiores saepe.</p>
+                            <p>Connect with top-notch healthcare professionals through MedBud's network doctors. Access quality care and expert medical advice tailored to your needs.</p>
                         </div>
                     </div>
                 </div>
@@ -206,13 +205,14 @@ if (!isset($_SESSION['admin_name'])) {
                                             <input type="text" id="searchInput" placeholder="Search specialization...">
                                         </div>
                                     </div>
+                                    <!-------------------------------------------------------- DOCTOR ------------------------------------------------------------>
                                     <li>
                                         <div class="doctors__list__container">
-                                            <img src="./dist/components/img/doctors/Bosco-Favila-Czarina-OB.jpg" alt="">
+                                            <img src="./dist/components/img/doctors/new/Ng-Tsai-Chua-Ophtha-2-1.jpg" alt="">
                                             <div class="doctors__list__name">
                                                 <div class="doctors__list__name__text">
-                                                    <h4>Dr. Czarina Basco</h4>
-                                                    <h6><i class="fa-solid fa-heart-pulse"></i>OB-Gyne</h6>
+                                                    <h4>Dr. Aimee Tsai</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Retina</h6>
                                                 </div>
                                             </div>
                                             <div class="doctors__list__schedule">
@@ -316,32 +316,11 @@ if (!isset($_SESSION['admin_name'])) {
                                     </li>
                                     <li>
                                         <div class="doctors__list__container">
-                                            <img src="./dist/components/img/doctors/tolentino-arnel-MD-1.jpg-1.png" alt="">
-                                            <div class="doctors__list__name">
-                                                <div class="doctors__list__name__text">
-                                                    <h4>Dr. C</h4>
-                                                    <h6>OB-Gyne</h6>
-                                                </div>
-                                            </div>
-                                            <div class="doctors__list__schedule">
-                                                <div class="doctors__list__schedule__text">
-                                                    <h3>Appoinment Hours:</h3>
-                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
-                                                </div>
-                                            </div>
-
-                                            <div class="doctors__list__appointment__btn">
-                                                <a href="#" class="make-appointment" data-doctor-name="Dr. Mark">Make an appointment</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="doctors__list__container">
                                             <img src="./dist/components/img/doctors/Bosco-Favila-Czarina-OB.jpg" alt="">
                                             <div class="doctors__list__name">
                                                 <div class="doctors__list__name__text">
                                                     <h4>Dr. Czarina Basco</h4>
-                                                    <h6>OB-Gyne</h6>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>OB-Gyne</h6>
                                                 </div>
                                             </div>
                                             <div class="doctors__list__schedule">
@@ -352,32 +331,375 @@ if (!isset($_SESSION['admin_name'])) {
                                             </div>
 
                                             <div class="doctors__list__appointment__btn">
-                                                <a href="#" class="make-appointment" data-doctor-name="Dr. Reinier">Make an appointment</a>
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
                                             </div>
                                         </div>
                                     </li>
+
+
+
                                     <li>
                                         <div class="doctors__list__container">
-                                            <img src="./dist/components/img/doctors/Bosco-Favila-Czarina-OB.jpg" alt="">
+                                            <img src="./dist/components/img/doctors/new/Urbino-Fernandez-Elsi-Lizette-Pedia.jpg" alt="">
                                             <div class="doctors__list__name">
                                                 <div class="doctors__list__name__text">
-                                                    <h4>Dr. Czarina Basco</h4>
-                                                    <h6>OB-Gyne</h6>
+                                                    <h4>Dr. Elsie Uribino</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Pediatrician</h6>
                                                 </div>
                                             </div>
                                             <div class="doctors__list__schedule">
                                                 <div class="doctors__list__schedule__text">
                                                     <h3>Appoinment Hours:</h3>
                                                     <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
-                                                    <!-- <input type="text"  -->
                                                 </div>
                                             </div>
 
                                             <div class="doctors__list__appointment__btn">
-                                                <a href="#" class="make-appointment" data-doctor-name="Dr. Czarina Basco">Make an appointment</a>
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
                                             </div>
                                         </div>
                                     </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/torres-castro-carmel-chtistine.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Carmel Castro</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>
+                                                        Pediatric Medicine</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/tang-judith-ang-dermatology-5-1.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Juding Tang</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Dermatology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Joson-rafael-radio-1-1.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Rafael Jason</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Radiology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Lo-Raymundo-Patho.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Raymundo Lo</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Pathology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Sarza-Lawrence-Anesth.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Lawrence Sarza</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Cardiologist</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Moti-Usma-Anesth.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Merenisa Usman</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Gastroenterologist</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/germar-maria-celina-psychiatry-21.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Cecilia Germar</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Psychiatry</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Yulde-Maria-Helen-Pedia.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Maria Yulde</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>General Pediatrics</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Salao-Ong-Angela-IM-2.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Angela Ong</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Internal Medicine</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Pilar-Artemio-Jr-IM-Pulmo-1.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Artemio Pilar</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>IM Pulmonology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Pineda-Barbara-Ophtha.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Barbara Pineda</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>General Opthalmology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/viber_image_2023-07-25_16-43-10-936.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Jose Navarro</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Neurology - Stroke</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Nacpil-Dominguez-Paulette-2-IM-Endo.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. Paulette Dominguez</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>IM Metabolism</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                    <li>
+                                        <div class="doctors__list__container">
+                                            <img src="./dist/components/img/doctors/new/Marinas-John-Paul-S.-Urology-1.jpg" alt="">
+                                            <div class="doctors__list__name">
+                                                <div class="doctors__list__name__text">
+                                                    <h4>Dr. John Marinas</h4>
+                                                    <h6><i class="fa-solid fa-heart-pulse"></i>Urology - Endourology</h6>
+                                                </div>
+                                            </div>
+                                            <div class="doctors__list__schedule">
+                                                <div class="doctors__list__schedule__text">
+                                                    <h3>Appoinment Hours:</h3>
+                                                    <h5>Mon-Fri &#160; &#160; &#160; 8:00am - 3:00pm</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="doctors__list__appointment__btn">
+                                                <a href="#" class="show-section">View Profile <i class="fa-solid fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
                                 </ul>
                                 <div class="no__doctor__message">
                                     <p id="noDoctorsMessage" style="display: none;">No doctors available</p>
@@ -402,31 +724,31 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="doctor__details__float">
                 <div class="doctor__img__float">
-                    <img src="./dist/components/img/doctors/Bosco-Favila-Czarina-OB.jpg" alt="">
+                    <img src="./dist/components/img/doctors/new/Ng-Tsai-Chua-Ophtha-2-1.jpg" alt="">
                 </div>
 
                 <div class="doctor__name__float">
-                    <h2>Dr. Czarina Basco</h2>
-                    <h3><i class="fa-solid fa-heart-pulse"></i>OB-Gyne</h3>
-                    <p>Consultation hours:</p>
-                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                    <h2>Dr. Aimee Tsai</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Retina</h3>
+                        <p>Consultation hours:</p>
+                        <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
                 </div>
             </div>
 
             <div class="doctor__contact-pf__float">
                 <div class="doctor__contact__float">
-                    <h5><i class="fa-solid fa-phone"></i> 09673625919</h5>
+                    <h5><i class="fa-solid fa-phone"></i>+63 917 1234567</h5>
                     <p>Contact Information</p>
                 </div>
 
                 <div class="doctor__pf__float">
-                    <h5>₱500</h5>
+                    <h5>₱2,000</h5>
                     <p>Professional Fee</p>
                 </div>
 
                 <div class="doctor__appointment__btn">
                     <!-- <a href="./appointment.php"><i class="fa-regular fa-calendar-days"></i>&#160;Appointment</a> -->
-                    <a href="#" onclick="setAndRedirect('Dr. Czarina Basco', 'OB-Gyne')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                    <a href="#" onclick="setAndRedirect('Dr. Aimee Tsai', 'Retina')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
                 </div>
             </div>
 
@@ -454,12 +776,12 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="doctor__contact-pf__float">
                 <div class="doctor__contact__float">
-                    <h5><i class="fa-solid fa-phone"></i> 09673625919</h5>
+                    <h5><i class="fa-solid fa-phone"></i> +63 929 9876543</h5>
                     <p>Contact Information</p>
                 </div>
 
                 <div class="doctor__pf__float">
-                    <h5>₱500</h5>
+                    <h5>₱1,000</h5>
                     <p>Professional Fee</p>
                 </div>
 
@@ -494,12 +816,12 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="doctor__contact-pf__float">
                 <div class="doctor__contact__float">
-                    <h5><i class="fa-solid fa-phone"></i> 09673625919</h5>
+                    <h5><i class="fa-solid fa-phone"></i> +63 918 2345678</h5>
                     <p>Contact Information</p>
                 </div>
 
                 <div class="doctor__pf__float">
-                    <h5>₱500</h5>
+                    <h5>₱1,500</h5>
                     <p>Professional Fee</p>
                 </div>
 
@@ -534,22 +856,23 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="doctor__contact-pf__float">
                 <div class="doctor__contact__float">
-                    <h5><i class="fa-solid fa-phone"></i> 09673625919</h5>
+                    <h5><i class="fa-solid fa-phone"></i> +63 927 8765432</h5>
                     <p>Contact Information</p>
                 </div>
 
                 <div class="doctor__pf__float">
-                    <h5>₱500</h5>
+                    <h5>₱800</h5>
                     <p>Professional Fee</p>
                 </div>
 
                 <div class="doctor__appointment__btn">
-                    <a href="#"><i class="fa-regular fa-calendar-days"></i>&#160;Appointment</a>
+                    <a href="#" onclick="setAndRedirect('Dr. Hervin Tang', 'IM - Cardiology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
                 </div>
             </div>
 
         </section>
     </div>
+
     <div class="additional-section-container" id="section5">
         <div class="overlay"></div>
         <section class="additional-section">
@@ -571,6 +894,47 @@ if (!isset($_SESSION['admin_name'])) {
 
             <div class="doctor__contact-pf__float">
                 <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 920 3456789</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Arnel Tolentino', 'ENT-HNS')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div class="additional-section-container" id="section6">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/Bosco-Favila-Czarina-OB.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Czarina Basco</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>OB-Gyne</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
                     <h5><i class="fa-solid fa-phone"></i> 09673625919</h5>
                     <p>Contact Information</p>
                 </div>
@@ -581,12 +945,613 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
 
                 <div class="doctor__appointment__btn">
-                    <a href="#"><i class="fa-regular fa-calendar-days"></i>&#160;Appointment</a>
+                    <a href="#" onclick="setAndRedirect('Dr. Czarina Basco', 'OB-Gyne')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
                 </div>
             </div>
 
         </section>
     </div>
+
+    <div class="additional-section-container" id="section7">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Urbino-Fernandez-Elsi-Lizette-Pedia.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Elsie Uribino</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Pediatrician</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 917 1112222</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱600</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Elsie Uribino', 'Pediatrician')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="additional-section-container" id="section8">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/torres-castro-carmel-chtistine.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Carmel Castro</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Pediatric Medicine</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 929 3334444</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱700</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Carmel Castro', 'Pediatric Medicine')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="additional-section-container" id="section9">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/tang-judith-ang-dermatology-5-1.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Juding Tang</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Dermatology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 918 5556666</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱1,000</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Juding Tang', 'Dermatology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <div class="additional-section-container" id="section10">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Joson-rafael-radio-1-1.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Rafael Jason</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Radiology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 927 7778888</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Rafael Jason', 'Radiology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div class="additional-section-container" id="section11">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Lo-Raymundo-Patho.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Raymundo Lo</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Pathology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 920 9990000</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱600</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Raymundo Lo', 'Pathology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div class="additional-section-container" id="section12">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Sarza-Lawrence-Anesth.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Lawrence Sarza</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Cardiologist</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 917 1230001</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Lawrence Sarza', 'Cardiologist')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+
+    <div class="additional-section-container" id="section13">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Moti-Usma-Anesth.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Merenisa Usman</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Gastroenterologist</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 929 4560002</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱1,000</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Merenisa Usman', 'Gastroenterologist')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div class="additional-section-container" id="section14">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/germar-maria-celina-psychiatry-21.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Cecilia Germar</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Psychiatry</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 918 7890003</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱1,000</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Cecilia Germar', 'Psychiatry')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <div class="additional-section-container" id="section15">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Yulde-Maria-Helen-Pedia.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Maria Yulde</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>General Pediatrics</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 927 0120004</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱600</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Maria Yulde', 'General Pediatrics')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <div class="additional-section-container" id="section16">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Salao-Ong-Angela-IM-2.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Angela Ong</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Internal Medicine</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 920 3450005</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱700</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Angela Ong', 'Internal Medicine')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    
+
+    <div class="additional-section-container" id="section17">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Pilar-Artemio-Jr-IM-Pulmo-1.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Artemio Pilar</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>IM Pulmonology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 917 6780006</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Artemio Pilar', 'IM Pulmonology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <div class="additional-section-container" id="section18">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Pineda-Barbara-Ophtha.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Barbara Pineda</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>General Opthalmology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 929 9010007</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Barbara Pineda', 'General Opthalmology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <div class="additional-section-container" id="section19">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/viber_image_2023-07-25_16-43-10-936.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Jose Navarro</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Neurology - Stroke</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 918 2340008</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱1,000</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Jose Navarro', 'Neurology - Stroke')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <div class="additional-section-container" id="section20">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Nacpil-Dominguez-Paulette-2-IM-Endo.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. Paulette Dominguez</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>IM Metabolism</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 927 5670009</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱800</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. Paulette Dominguez', 'IM Metabolism')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <div class="additional-section-container" id="section21">
+        <div class="overlay"></div>
+        <section class="additional-section">
+            <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+
+
+            <div class="doctor__details__float">
+                <div class="doctor__img__float">
+                    <img src="./dist/components/img/doctors/new/Marinas-John-Paul-S.-Urology-1.jpg" alt="">
+                </div>
+
+                <div class="doctor__name__float">
+                    <h2>Dr. John Marinas</h2>
+                    <h3><i class="fa-solid fa-heart-pulse"></i>Urology - Endourology</h3>
+                    <p>Consultation hours:</p>
+                    <h4>Mon-Fri &#160; 8:00am - 3:00pm</h4>
+                </div>
+            </div>
+
+            <div class="doctor__contact-pf__float">
+                <div class="doctor__contact__float">
+                    <h5><i class="fa-solid fa-phone"></i> +63 920 8900010</h5>
+                    <p>Contact Information</p>
+                </div>
+
+                <div class="doctor__pf__float">
+                    <h5>₱1,000</h5>
+                    <p>Professional Fee</p>
+                </div>
+
+                <div class="doctor__appointment__btn">
+                    <a href="#" onclick="setAndRedirect('Dr. John Marinas', 'Urology - Endourology')"><i class="fa-regular fa-calendar-days"></i>&#160;Make an Appointment</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
 
 
 

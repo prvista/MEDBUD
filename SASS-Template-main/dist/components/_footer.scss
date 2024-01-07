@@ -230,7 +230,7 @@
 
     
 
-@include mobile-view {
+@media screen and (max-width:890px) {
     .footer{
         
         .container{

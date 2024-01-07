@@ -1,4 +1,6 @@
 .doctors__list{
+    max-width: 100%;
+    // overflow: scroll;
     &__main__title{
         padding: 0 2rem 2rem 0;
         h2{
@@ -7,8 +9,10 @@
         }
     }
     &__wrapper{
-        border-radius: 1.5rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        border-radius: 0.5rem;
+        border: 2px solid #c9cbce9f;
+
+        
 }
         ul{
             // padding: 1rem;
@@ -52,7 +56,7 @@
                     padding: 1rem;
 
                     img{
-                        width: 5rem;
+                        width: 8.3rem;
                         border-radius: 0.5rem;
                     }
 
@@ -70,7 +74,7 @@
                         }
 
                         h6{
-                            font-size: 1.3rem;
+                            font-size: 1.5rem;
                             display: flex;
                             font-weight: 500;
                             color: rgb(184, 184, 184);
@@ -164,7 +168,7 @@
 
 
 .doc__banner{
-    background-image: url(../components/img/doctor--bg.jpg);
+    background-image: url(../components/img/doctors-hands-holding-medical-care-objects.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

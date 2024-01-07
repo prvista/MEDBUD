@@ -54,10 +54,6 @@
         }
     }
     &__nav{   
-        // background: linear-gradient(
-        //     60deg,
-        //     rgb(0, 163, 204) 0%,
-        //     rgb(26, 29, 218) 100%);
         background: linear-gradient(60deg, rgb(0 62 78) 0%, rgb(0 0 0) 100%);
         width: 30rem;
         height: 93.6vh;
@@ -65,7 +61,6 @@
         margin-top: -19rem;
         position: fixed;
         .burger__btn{
-            // background:rgb(0, 50, 143);
             padding: 1.7rem;
             display: flex;
             flex-direction: column;
@@ -301,3 +296,289 @@ table {
     margin-top: 20px;
 }
 
+
+.features--shape {
+    // bottom: -150px;
+    // min-width: 2000px;
+    // position: absolute;
+    bottom: 6px;
+    // left: 50%;
+    width: 100%;
+    // min-width: 2600px;
+    // max-width: 2600px;
+    // -webkit-transform: translateX(-50%) rotate(3deg);
+    // -ms-transform: translateX(-50%) rotate(3deg);
+    // transform: translateX(-50%) rotate(3deg);
+    fill: #fff;
+    -webkit-filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
+    filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
+    // transform: rotate(180deg);
+    background: #00a2ae;
+}
+
+
+
+
+
+
+.process{
+    // min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    background-image: linear-gradient(rgba(83, 255, 140, 0.7),rgba(34, 229, 255, 0.7)) ,url(../components/img/bluebar.svg);
+    background-position: center;
+
+    
+
+    .process__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .process__description{
+            
+            .process__text{
+                
+                b{
+                    font-size: 3rem;
+                    
+                }
+                p{
+                    font-size: 1.7rem;
+                    color: white;
+                    margin-top: 2rem;
+                    font-weight: 500;
+                    width: 49rem;
+                }
+                .btn__process {
+                    padding: 1rem 1.5rem;
+                    border: 1px solid transparent;
+                    display: inline-block;
+                    border-radius: 1rem;
+                    font-weight: 600;
+                    width: 20rem;
+                    height: 4rem;
+                    font-size: 1.5rem;
+                    margin-top: 3rem;
+                    align-items:center;
+                    display: flex;
+                    justify-content: center;
+
+
+                    i{
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin-left: 0.3rem;
+                    }
+                  }
+                  .btn__process.bg--green {
+                    // background: linear-gradient(
+                    // 60deg,
+                    // rgb(116, 214, 149) 0%,
+                    // rgb(58, 200, 219) 100%);
+                    background: white;
+                    color: #000000;
+                  }
+            }
+        }
+        .flex__wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: space-between;
+            .flex__box{
+                width: 17rem;
+                height: 20rem;
+                background-color: #fafefe;
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+                padding: 2rem;
+                align-items: center;
+                border: 1px solid rgba(12, 184, 182, 1);
+                border-radius: 1rem;
+                
+                .appointment{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                    img{
+                        
+                        
+                        width: 10rem;
+                        
+                    }
+                    b{
+                        text-align: center;
+                        font-size: 1.7rem;
+                        
+                    }
+                }
+                .doctor{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                    img{
+                        width: 9.8rem;
+                        
+                        
+                    }
+                    b{
+                        text-align: center;
+                        font-size: 1.7rem;
+                        
+                    }
+                }
+                .consultation{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                    img{
+                        width: 9.5rem;
+                        
+                        
+                    }
+                    b{
+                        text-align: center;
+                        font-size: 1.7rem;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@include mobile-view {
+.process{
+    padding: unset;
+    .process__wrapper{
+        display: unset;
+        .process__description{
+            .process__text{
+                b{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+                .btn{
+                    margin-top: 2rem;
+                }
+            }
+        }   
+        .flex__wrapper{
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            
+            .flex__box{
+                margin: unset;
+                
+                width: auto;
+                margin-top: 1.5rem;
+                .appointment{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                }
+                .doctor{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                }
+                .consultation{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 auto;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+        }      
+    }
+}
+}
+
+
+
+// SLIDEEEEEER BOTTTTTTOOOOOOM
+
+
+
+.bottom__slider{
+    // height: 250px;
+    margin: 0 auto;
+    // position: relative;
+    // width: 90%;
+    // display: grid;
+    // place-items: center;
+    // overflow: hidden;
+    // min-height: 70vh;
+    // display: grid;
+    // place-items: center;
+    
+
+    .bottom__slider__wrapper{
+        display: flex;
+        width: calc(250px * 18);
+        animation: scroll 40s linear infinite;
+
+        @keyframes scroll{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 9));
+            }
+        }
+
+        .bottom__slide{
+            height: 250px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+
+            img{
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+// .features {
+//     position: absolute;
+//     // bottom: -180px;
+//     left: 50%;
+//     width: 120%;
+//     min-width: 2600px;
+//     max-width: 2600px;
+//     -webkit-transform: translateX(-50%) rotate(3deg);
+//     -ms-transform: translateX(-50%) rotate(3deg);
+//     transform: translateX(-50%) rotate(3deg);
+//     fill: #0011ff;
+//     -webkit-filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
+//     filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
+//     // bottom: -150px;
+//     min-width: 2000px;
+// }
