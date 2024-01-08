@@ -53,6 +53,7 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-top: 5px;
+    transition: 0.3s ease;
   }
   
   .appointment-name input:focus,
@@ -64,6 +65,7 @@
   .appointment-doctor input:focus {
     border-color: #00d87e; 
     box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+    transition: 0.3s ease;
   }
   
   .appointment-name {
@@ -103,23 +105,31 @@
   }
   
   .appointment-button button {
-    padding: 8px 20px;
+    padding: 9px 20px;
     border-radius: 30px;
     margin-left: 5px;
     cursor: pointer;
-    transition: 0.3s ease;
     font-size: 15px;
   }
   
   .btn-outline-secondary {
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #333;
+    // background-color: transparent;
+    border: 1.8px solid rgb(2, 50, 112);
+    background: transparent;
+
+    a{
+    color:rgb(2, 50, 112);
+    font-weight: 500;
+    }
+
   }
   
   .btn-outline-secondary:hover {
-    background-color: #333;
-    color: #fff;
+    // background-color: #333;
+    background-color: rgb(2, 50, 112);
+    a{
+      color: #fff;
+    }
   }
   
   .btn-primary {
@@ -133,7 +143,10 @@
   }
   
   .btn-primary:hover {
-    background-color: #0056b3;
+      background: linear-gradient(
+          60deg,
+          rgb(106, 197, 137) 0%,
+          rgb(54, 187, 204) 100%);
   }
   
 

@@ -249,7 +249,7 @@
         rgb(58, 200, 219) 100%);
         border-radius: 1.2rem;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -10px;
-        transition: 0.4s ease;
+        transition: 0.3s ease;
         color: white;
 
         &__text{
@@ -277,7 +277,7 @@
             display: flex;
             padding: 12px 32px;
             border-radius: 5px;
-            transition: 0.5s ease;
+            transition: 0.3s ease;
             color: rgb(2, 50, 112);
             background: #ffffff;
             align-items: center;
@@ -286,7 +286,8 @@
             
 
             &:hover{
-              background: #e7ffef;
+              background: rgb(2, 50, 112);
+              color: white;
             }
 
             i{
@@ -512,6 +513,7 @@
         object-fit: cover;
         border-top-right-radius: 0.7rem;
         border-top-left-radius: 0.7rem;
+        box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
       }
 
       &__text{
@@ -858,7 +860,6 @@
 .sign-in__form form {
   // padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   // background: #fff;
   text-align: center;
   width: 1000px;
@@ -868,7 +869,7 @@
 }
 
 .sign-in__form form img{
-  width: 14rem;
+  width: 16rem;
   display: flex;
 }
 
@@ -887,9 +888,9 @@
   padding: 10px 15px;
   font-size: 17px;
   margin: 12px 0;
-  // background: #ffffff;
-  background: #eee;
   border-radius: 5px;
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
+  border-radius: 7px;
 
   &:focus{
     box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
@@ -909,7 +910,7 @@
 }
 
 .sign-in__form form .form-btn {
-  background:rgb(128, 236, 164);
+  background:rgb(2, 50, 112);
   color: rgb(255, 255, 255);
   text-transform: capitalize;
   font-size: 20px;
@@ -918,7 +919,7 @@
 }
 
 .sign-in__form form .form-btn:hover {
-  background: rgb(116, 214, 149);
+  background: rgb(4, 60, 134);
   color: #fff;
   transition: 0.5s ease;
 }
@@ -941,6 +942,7 @@
   border-radius: 5px;
   font-size: 20px;
   padding: 10px;
+  font-size: 2rem;
 }
 
 
@@ -954,7 +956,13 @@
   padding: 20px;
   padding-bottom: 60px;
   // background: rgb(248, 248, 248);
-  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);;
+  // background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+  vertical-align: middle;
+  /* Use linear gradient and image as background */
+  background: linear-gradient(60deg, rgba(116, 214, 149, 0.7) 0%, rgba(58, 200, 219, 0.7) 100%), url(../components/img/our-dept/meddd.png);
+  /* Set background size, position, and other properties as needed */
+  background-size: cover;
+  background-position: center;
 
   &__wrapper{
     display: grid;
@@ -1088,10 +1096,17 @@
           rgb(58, 200, 219) 100%);
           color: $clr-light;
           margin-bottom: 2rem;
+          transition: 0.3s ease;
+
           i{
               font-size: 1rem;
               align-items: center;
           }
+
+          &:hover{
+            transition: 0.3s ease;
+            transform: scale(1.04);
+       }
         }
       .banner__wrapper{
           
@@ -1125,7 +1140,7 @@
           gap: 1.5rem;
           .orthopaedics{
               img{
-                  width: 15rem;
+                width: 11rem;
               }
               strong{
                   font-size: 90px;
@@ -1377,12 +1392,101 @@
 }
 
 
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #ff2600; /* Change to your preferred color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #be201a; /* Change to a darker shade or hover color */
+}
 
 
 
 
+.medtips{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  &__wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .title{
+          display: flex;
+          justify-content: center;
+          h1{
+              font-size: 4rem;
+          }
+          h2{
+              font-size: 4rem;
+              font-weight: 600;
+              background: linear-gradient(
+          60deg,
+          rgb(100, 179, 243)10%,
+          rgb(69, 233, 255) 100%);
+          -webkit-background-clip: text;
+          color: transparent;
+          }
+      }
+      .dropdown{
+          display: flex;
+          flex-direction: column;
+          .text__tips{
+              .topdrop{
+                  border-width: 1px;
+                  h1{
+                  padding: 1rem;
+                  align-items: center;
+                  background: linear-gradient(60deg, rgb(116, 214, 149) 0%, rgb(58, 200, 219) 100%);
+                  display: flex;
+                  max-width: 120rem;
+                  justify-content: space-between;
+                  
+                      i{
+                          display: flex;
+                          transition: 0.5s ease;
+                          &.open{
+                              transform: rotate(180deg);
+                              transition: 0.5s ease;
+                          }
+                      }
+                  }
 
-
- 
-  
- 
+                  p{  
+                      max-height: 0;
+                      overflow: hidden;
+                      transition: 0.2s ease;
+                      padding-left: 1rem;
+                      padding-right: 1rem;
+                      max-width: 120rem;
+                      &.open{
+                          padding-top: 1rem;
+                          padding-bottom: 1rem;
+                          max-height: 90rem;
+                          overflow: unset;
+                          transition: 0.2s ease;
+                          max-width: 120rem;
+                      }
+                  }
+                 
+              }
+          }   
+          
+      }
+      .see__more{
+          display: flex;
+          justify-content: center;
+          a{
+              i{
+                  margin-left: 1rem;
+              }
+          }
+      }
+  }
+}

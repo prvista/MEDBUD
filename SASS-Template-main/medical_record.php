@@ -175,7 +175,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <div class="med__banner__text">
                             <h2>MedBud Medical Record</h2>
                             <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel minus in, quos perferendis nam quas reiciendis impedit maiores saepe.</p>
+                            <p>MedBud allows users to effortlessly upload and manage their medical records, ensuring easy access and organized documentation for enhanced healthcare management.</p>
                         </div>
                     </div>
                 </div>

@@ -429,6 +429,15 @@ table {
             border-radius: 2rem;
             font-weight: 600;
             color: white;
+            transition: 0.3s ease;
+            
+            &:hover{
+              transition: 0.3s ease;
+              background: linear-gradient(
+                  60deg,
+                  rgb(106, 197, 137) 0%,
+                  rgb(54, 187, 204) 100%);
+         }
         }
       }
     }

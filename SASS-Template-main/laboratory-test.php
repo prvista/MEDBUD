@@ -1,46 +1,52 @@
 <?php
 session_start(); // Starting the session
 
-// Check if the form is submitted
+// Database configuration (update with your credentials)
+$servername = "localhost";
+$username = "root";
+$password = ""; // Replace with your MySQL password
+$dbname = "labtest_db";
+
+// Establishing a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
-    // Check if all required fields are filled
-    if (empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['contact_no']) || empty($_POST['gender']) || empty($_POST['test_date']) || empty($_POST['test_time']) || empty($_POST['selectedTestsDisplay'])) {
+    // Basic form validation - Ensure required fields are not empty
+    if (empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['contact_no']) || empty($_POST['gender']) || empty($_POST['test_date']) || empty($_POST['test_time']) || empty($_POST['selectedTestsDisplay']) || empty($_POST['totalAmountInput'])) {
         die("Please fill in all required fields.");
     }
 
-    // Retrieve form data
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $contact_no = $_POST['contact_no'];
-    $gender = $_POST['gender'];
-    $test_date = $_POST['test_date'];
-    $test_time = $_POST['test_time'];
-    $selected_tests = $_POST['selectedTestsDisplay'];
+    // Get the total amount from the input field
+    $total_amount_input = $_POST['totalAmountInput'];
 
-    // Database configuration (update with your credentials)
-    $servername = "localhost";
-    $username = "root";
-    $password = ""; // Replace with your MySQL password
-    $dbname = "labtest_db";
-
-    // Establishing a connection to the database
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    // Extracting the numerical value
+    $total_amount = floatval(preg_replace('/[^0-9.]/', '', $total_amount_input));
 
     // Prepare and bind the INSERT statement with prepared statements
-    $stmt = $conn->prepare("INSERT INTO lab_tests (first_name, last_name, contact_no, gender, test_date, test_time, selected_tests) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO lab_tests (first_name, last_name, contact_no, gender, test_date, test_time, selected_tests, total_amount) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
     if ($stmt) {
         // Bind parameters
-        $stmt->bind_param("sssssss", $first_name, $last_name, $contact_no, $gender, $test_date, $test_time, $selected_tests);
+        $stmt->bind_param("ssissssd", $first_name, $last_name, $contact_no, $gender, $test_date, $test_time, $selected_tests, $total_amount);
+
+        // Set parameters (data fetched from $_POST)
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $contact_no = $_POST['contact_no'];
+        $gender = $_POST['gender'];
+        $test_date = $_POST['test_date'];
+        $test_time = $_POST['test_time'];
+        $selected_tests = $_POST['selectedTestsDisplay'];
 
         // Execute the prepared statement
         if ($stmt->execute()) {
-            echo '<script>alert("User data inserted into the database successfully.");</script>';
+            // Generating JavaScript alert code
+            echo '<script>alert("Total amount inserted into the database successfully: Php ' . number_format($total_amount, 2) . '");</script>';
         } else {
             echo "Error: " . $stmt->error;
         }
@@ -50,13 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
     } else {
         echo "Error: Unable to prepare the statement.";
     }
-
-    // Close the database connection
-    $conn->close();
 }
+
+// Close the database connection
+$conn->close();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
                     <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
                 </div>
 
-                <div class="header__nav" id="head__red">
+                <div class="header__nav">
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -200,14 +204,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
                             <form class="lab-form" action="./laboratory-test.php" method="post" id="labTestForm">
                                 <div class="labtest__wrapper">
                                     <div class="labtest__name">
-                                        <input type="text" name="first_name" placeholder="First Name" required>
-                                        <input type="text" name="last_name" placeholder="Last Name" required>
+                                        <input type="text" name="first_name" placeholder="First Name">
+                                        <input type="text" name="last_name" placeholder="Last Name">
                                     </div>
 
                                     <div class="labtest__info">
-                                        <!-- <input type="email" name="email" placeholder="Email" required> Added email field -->
-                                        <input type="tel" name="contact_no" placeholder="Contact No" required>
-                                        <select name="gender" required>
+                                        <input type="tel" name="contact_no" placeholder="Contact No">
+                                        <select name="gender">
                                             <option selected disabled>Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -215,8 +218,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
                                     </div>
 
                                     <div class="labtest__sched-date">
-                                        <input type="date" class="" placeholder="Enter Date" name="test_date" required>
-                                        <input type="time" class="" placeholder="Enter Time" name="test_time" required>
+                                        <input type="date" class="" placeholder="Enter Date" name="test_date">
+                                        <input type="time" class="" placeholder="Enter Time" name="test_time">
                                     </div>
 
                                     <div class="labtest__type">
@@ -225,7 +228,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
                                     </div>
 
                                     <div class="labtest__btn">
-                                        <a href="#">Cancel</a>
+                                        <button href="./dashboard.php">Cancel</button>
                                         <button type="submit" name="submit_form" id="submitForm">Book Test</button>
                                     </div>
                                 </div>

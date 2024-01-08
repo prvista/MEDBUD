@@ -214,7 +214,8 @@
 }
 
 .appointment__details{
-    border: 2px solid #c9cbce9f;
+    // border: 2px solid #c9cbce9f;
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.7);
     border-radius: 7px;
     &__wrapper{
         h2{

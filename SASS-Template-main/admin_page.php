@@ -148,6 +148,10 @@ if (isset($_POST['action']) && $_POST['action'] == 'update_appointment') {
             </div>
          </div>
 
+         <div class="search-container" style="margin-bottom: 10px;">
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names...">
+         </div>
+
          <!-- <div class="med__banner">
             <div class="container">
                <div class="med__banner__wrapper">
@@ -164,7 +168,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'update_appointment') {
          $result = $conn->query($sql);
          ?>
 
-         <table class="table__app">
+         <table class="table__app" id="appointmentTable">
             <tr>
                <th>ID</th>
                <th>First Name</th>
@@ -186,12 +190,12 @@ if (isset($_POST['action']) && $_POST['action'] == 'update_appointment') {
                while ($row = $result->fetch_assoc()) {
                   echo "<tr>";
                   echo "<td>" . $row["id"] . "</td>";
-                  echo "<td><input type='text' name='first_name' value='" . $row['first_name'] . "'></td>";
-                  echo "<td><input type='text' name='last_name' value='" . $row['last_name'] . "'></td>";
+                  echo "<td><input style='font-size: 1.5rem' type='text' name='first_name' value='" . $row['first_name'] . "'></td>";
+                  echo "<td><input style='font-size: 1.5rem' type='text' name='last_name' value='" . $row['last_name'] . "'></td>";
                   echo "<td>" . $row["email"] . "</td>";
                   echo "<td>" . $row["phone"] . "</td>";
-                  echo "<td>" . $row["appointment_date"] . "</td>";
-                  echo "<td>" . $row["appointment_time"] . "</td>";
+                  echo "<td><input style='font-size: 1.5rem' type='text' name='last_name' value='" . $row["appointment_date"] . "'></td>";
+                  echo "<td><input style='font-size: 1.5rem' type='text' name='last_name' value='" . $row["appointment_time"] . "'></td>";
                   echo "<td>" . $row["hmo"] . "</td>";
                   echo "<td>" . $row["consultation_type"] . "</td>";
                   echo "<td>" . $row["specialization"] . "</td>";
@@ -208,12 +212,63 @@ if (isset($_POST['action']) && $_POST['action'] == 'update_appointment') {
                echo "<tr><td colspan='13'>No appointments found</td></tr>";
             }
             ?>
+
+            <!-- <div class="instructions">
+               <div class="instructions__text">
+
+                  <h2>Instructions</h2>
+                  <h3>Press the box you wanted to edit</h3>
+                  <h3>Press save when you want to save the changes</h3>
+                  <h3>Press delete to delete appointment</h3>
+               </div>
+            </div> -->
          </table>
 
-         <!-- Your HTML code -->
-         <!-- Include any headers, navigations, etc. -->
+         <div id="noResults" style="display: none; text-align: center; margin-top: 10px;">
+            No available appointments match your search.
+         </div>
+
+
 
          <script>
+            // search
+            function searchTable() {
+               var input, filter, table, tr, td, i, txtValue, found;
+               input = document.getElementById("searchInput");
+               filter = input.value.toUpperCase();
+               table = document.getElementById("appointmentTable");
+               tr = table.getElementsByTagName("tr");
+               found = false;
+
+               // Loop through all table rows except the first (headers)
+               for (i = 1; i < tr.length; i++) {
+                  td = tr[i].getElementsByTagName("td");
+                  tr[i].style.display = "none"; // Hide by default
+
+                  for (var j = 0; j < td.length; j++) {
+                     if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                           tr[i].style.display = "";
+                           found = true;
+                           break;
+                        }
+                     }
+                  }
+               }
+
+               // Show/hide message if no results found
+               var noResultsMessage = document.getElementById("noResults");
+               if (!found) {
+                  noResultsMessage.style.display = "block";
+               } else {
+                  noResultsMessage.style.display = "none";
+               }
+            }
+
+
+
+
             function saveChanges(id) {
                var firstName = document.querySelector('input[name="first_name"]').value;
                var lastName = document.querySelector('input[name="last_name"]').value;

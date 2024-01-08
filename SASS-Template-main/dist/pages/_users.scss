@@ -376,12 +376,16 @@ table {
                     }
                   }
                   .btn__process.bg--green {
-                    // background: linear-gradient(
-                    // 60deg,
-                    // rgb(116, 214, 149) 0%,
-                    // rgb(58, 200, 219) 100%);
                     background: white;
-                    color: #000000;
+                    color: rgb(2, 50, 112);
+                    transition: 0.3s ease;
+
+                    &:hover{
+                        background: rgb(2, 50, 112);
+                        color: white;
+                        transition: 0.3s ease;  
+
+                    }
                   }
             }
         }
@@ -567,19 +571,3 @@ table {
 }
 
 
-// .features {
-//     position: absolute;
-//     // bottom: -180px;
-//     left: 50%;
-//     width: 120%;
-//     min-width: 2600px;
-//     max-width: 2600px;
-//     -webkit-transform: translateX(-50%) rotate(3deg);
-//     -ms-transform: translateX(-50%) rotate(3deg);
-//     transform: translateX(-50%) rotate(3deg);
-//     fill: #0011ff;
-//     -webkit-filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
-//     filter: drop-shadow(0 -25px 15px rgba(45,53,71,.03));
-//     // bottom: -150px;
-//     min-width: 2000px;
-// }

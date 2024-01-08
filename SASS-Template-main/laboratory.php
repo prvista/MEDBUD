@@ -113,7 +113,7 @@ if (!isset($_SESSION['user_name'])) {
 
             <div class="dashboard__form__title">
                 <div class="dashboard__form__title__text">
-                    <h3>Laboratory</h3>
+                    <h3>Laboratory Tests</h3>
                 </div>
 
                 <div class="dashboard__date" id="todayDate">
@@ -138,8 +138,8 @@ if (!isset($_SESSION['user_name'])) {
             </div>
 
             <div class="lab__details__title">
-                <h2>Laboratory Tests Available</h2>
-                <a href="#" class="open-cart-btn"><i class="fa-regular fa-calendar-check"></i>&nbsp;Lab Tests Booked <span class="cart-count">0</span></a>
+                <h2>Laboratory Tests Booked</h2>
+                <a href="#" class="open-cart-btn"><i class="fa-regular fa-calendar-check"></i>&nbsp;<span class="cart-count">0</span></a>
             </div>
 
 
@@ -153,8 +153,8 @@ if (!isset($_SESSION['user_name'])) {
                     <div class="cart-close">&times;</div>
                     <div class="cart-items-total">
                         <div class="cart__nav__head">
+                            <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="">
                             <h2>Lab Test Bookings</h2>
-                            <h3>Lab Tests Booked</h3>
                         </div>
 
 
@@ -636,7 +636,16 @@ if (!isset($_SESSION['user_name'])) {
                             const deleteButton = document.createElement('button');
                             deleteButton.classList.add('delete-btn');
                             deleteButton.innerHTML = 'x';
-                            deleteButton.style.float = 'right';
+                            deleteButton.style.cssText = `
+                                                                float: right;
+                                                                font-size: 2.3rem;
+                                                                background: transparent;
+                                                                cursor: pointer;
+                                                                line-height: 1;
+                                                                height: 30px; 
+
+                                                            `;
+
 
                             deleteButton.addEventListener('click', () => {
                                 const index = selectedTests.indexOf(testName);

@@ -32,6 +32,8 @@ if (!isset($_SESSION['user_name'])) {
 
    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+
+
 </head>
 
 <body>
@@ -119,7 +121,7 @@ if (!isset($_SESSION['user_name'])) {
                   <p>MedBud is a comprehensive healthcare app that integrates various essential features to streamline your medical experience.</p>
                   <ul>
                      <li>
-                        <i class="fa-solid fa-check-double"></i>MedBud streamlines healthcare management through features like record management and scheduling, enhancing user experience"
+                        <i class="fa-solid fa-check-double"></i>MedBud streamlines healthcare management through features like record management and scheduling, enhancing user experience
                      </li>
                      <li>
                         <i class="fa-solid fa-check-double"></i>MedBud offers an intuitive interface for easy navigation and access to healthcare resources.
@@ -154,26 +156,26 @@ if (!isset($_SESSION['user_name'])) {
       <div class="container">
          <div class="lower__banner__title">
             <h2 id="service__link">WE PROVIDE BEST HEALTHCARE SERVICES</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quas!</h4>
+            <h4>Delivering top-tier healthcare services tailored to your needs</h4>
          </div>
          <div class="lower__banner__wrapper">
             <div class="lower__banner__content">
                <div class="lower__banner__item">
-                  <img src="./dist/components/img-mobile/appoint-icon.webp" alt="">
+                  <img src="./dist/components/dept/electroniccc.webp" alt="">
                   <div class="lower__banner__text">
                      <h5>Schedule Appointment</h5>
                      <p>Effortlessly schedule your appointments without additional costs. Our service empowers you to choose the most suitable day and time for your appointment.</p>
                   </div>
                </div>
                <div class="lower__banner__item">
-                  <img src="./dist/components/img-mobile/result.webp" alt="">
+                  <img src="./dist/components/dept/labtest.webp" alt="">
                   <div class="lower__banner__text">
                      <h5>Lab Test Booking</h5>
                      <p>Optimize your lab test scheduling and save on additional costs with MedBud. Take control of your schedule and choose the most convenient day and time for you</p>
                   </div>
                </div>
                <div class="lower__banner__item">
-                  <img src="./dist/components/img-mobile/medical-record.webp" alt="">
+                  <img src="./dist/components/dept/schedapp.webp" alt="">
                   <div class="lower__banner__text">
                      <h5>Electronic Medical Record</h5>
                      <p>Effortlessly update your medical records, ensuring accurate and up-to-date information for better continuity of care within the MedBud platform.</p>
@@ -266,7 +268,7 @@ if (!isset($_SESSION['user_name'])) {
                   <div class="orthopaedics">
                      <div class="flex__box">
                         <div class="upper__img">
-                           <img src="./dist/components/img/our-dept/specialities.webp" alt="">
+                           <img src="./dist/components/img-mobile/dept.webp" alt="">
                            <strong>01</strong>
                         </div>
                         <b>Primary Care & General Medicine</b>
@@ -286,13 +288,12 @@ if (!isset($_SESSION['user_name'])) {
                                  <li>
                                     <b><i class="fa-solid fa-check"></i>Abdominal pain</b>
                                     <b><i class="fa-solid fa-check"></i>Bronchitis</b>
-                                    <!-- <b><i class="fa-solid fa-check"></i>Bones</b> -->
                                  </li>
                               </ul>
                            </div>
                         </div>
 
-                        <a href="" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
+                        <a href="./dashboard.php" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
                      </div>
                   </div>
                   <div class="dermatologist">
@@ -322,7 +323,7 @@ if (!isset($_SESSION['user_name'])) {
                               </ul>
                            </div>
                         </div>
-                        <a href="" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
+                        <a href="./dashboard.php" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
                      </div>
                   </div>
                </div>
@@ -354,7 +355,7 @@ if (!isset($_SESSION['user_name'])) {
                               </ul>
                            </div>
                         </div>
-                        <a href="" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
+                        <a href="./dashboard.php" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
                      </div>
                   </div>
                   <div class="corona__checkup">
@@ -384,7 +385,7 @@ if (!isset($_SESSION['user_name'])) {
                               </ul>
                            </div>
                         </div>
-                        <a href="" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
+                        <a href="./dashboard.php" class="btn bg--green">Get Appointment <i class="fa-solid fa-chevron-right fa-sm"></i></a>
                      </div>
                   </div>
                </div>
@@ -412,31 +413,7 @@ if (!isset($_SESSION['user_name'])) {
 
 
 
-   <!-- <section class="service">
-      <div class="container">
-         <div class="service__title">
-            <h2>Our Services</h2>
-            <h3>We offer</h3>
-         </div>
-         <div class="service__wrapper">
-            <div class="service__item">
-               <img src="./dist/components/img/about_img.png" alt="" />
-               <h4>Service</h4>
-               <a href="">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="service__item">
-               <img src="./dist/components/img/about-icon.png" alt="" />
-               <h4>Service</h4>
-               <a href="">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="service__item">
-               <img src="./dist/components/img/schedule.png" alt="" />
-               <h4>Service</h4>
-               <a href="">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-         </div>
-      </div>
-   </section> -->
+
 
 
    <!---------------------- OUR DOCTORS SECTION---------------------------------->
@@ -446,7 +423,7 @@ if (!isset($_SESSION['user_name'])) {
       <div class="container">
          <div class="our__doctors__title">
             <h2 id="service">MEET OUR EXPERT DOCTORS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quam. </p>
+            <p>Discover and connect with our team of experienced and skilled medical professionals</p>
          </div>
          <div class="our__doctors__wrapper">
             <div class="slider-nav">
@@ -541,6 +518,55 @@ if (!isset($_SESSION['user_name'])) {
       </div>
    </section>
 
+   <section class="medtips">
+      <div class="medtips__wrapper">
+         <div class="title">
+            <h1>Med</h1>
+            <h2>Tips</h2>
+         </div>
+         <div class="dropdown">
+            <div class="text__tips">
+               <div class="topdrop">
+                  <h1>Stay Hydrated<i class="fa-solid fa-chevron-down"></i></h1>
+                  <p>Drink an adequate amount of water throughout the day to support bodily functions and maintain overall health.</p>
+               </div>
+            </div>
+            <div class="text__tips">
+               <div class="topdrop">
+                  <h1>Adequate Sleep<i class="fa-solid fa-chevron-down"></i></h1>
+                  <p>Engage in regular physical activity to promote cardiovascular health, maintain a healthy weight, and improve overall fitness.</p>
+               </div>
+            </div>
+            <div class="text__tips">
+               <div class="topdrop">
+                  <h1>Regular Health Check-ups<i class="fa-solid fa-chevron-down"></i></h1>
+                  <p>Schedule regular check-ups with your healthcare provider for preventive care and early detection of potential health issues.</p>
+               </div>
+            </div>
+            <div class="text__tips">
+               <div class="topdrop">
+                  <h1>Stress Management<i class="fa-solid fa-chevron-down"></i></h1>
+                  <p>Practice stress-reducing techniques such as meditation, deep breathing, or yoga to manage stress levels, which can impact both mental and physical health.</p>
+               </div>
+            </div>
+            <div class="text__tips">
+               <div class="topdrop">
+                  <h1>Stay Informed<i class="fa-solid fa-chevron-down"></i></h1>
+                  <p>Keep yourself informed about your health by understanding your family medical history, staying up-to-date on vaccinations, and being aware of potential health risks associated with your lifestyle.</p>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="see__more">
+            <a href="">See more tips<i class="fa-solid fa-arrow-right"></i></a>
+         </div>
+
+      </div>
+   </section>
+
+
+
    <div class="bottom__slider">
       <div class="bottom__slider__wrapper">
          <div class="bottom__slide">
@@ -621,7 +647,7 @@ if (!isset($_SESSION['user_name'])) {
                <div class="footer__section">
                   <div class="footer__branding">
                      <img src="./dist/components/img/medbud__logo.png" alt="">
-                     <p>non mauris non mauris non mauris non mauris non mauris non mauris non mauris non mauris non mauris</p>
+                     <p>Your comprehensive healthcare companion, providing streamlined solutions for personalized medical management</p>
 
                   </div>
                </div>
@@ -637,12 +663,11 @@ if (!isset($_SESSION['user_name'])) {
                         </div>
 
                         <ul>
-                           <li><a href="">Home</a></li>
-                           <li><a href="">About</a></li>
+                           <li><a href="./user_page.php">Home</a></li>
+                           <li><a href="#about">About</a></li>
                            <li><a href="">MedTips</a></li>
-                           <li><a href="">Services</a></li>
+                           <li><a href="#service__link">Services</a></li>
                            <li><a href="">Contact</a></li>
-                           <li><a href="">Login</a></li>
                         </ul>
                      </div>
                   </div>
@@ -656,8 +681,8 @@ if (!isset($_SESSION['user_name'])) {
                            </ul>
                         </div>
                         <ul>
-                           <li><a href="">Book Appointment</a></li>
-                           <li><a href="">Department</a></li>
+                           <li><a href="./dashboard.php">Book Appointment</a></li>
+                           <li><a href="#department">Department</a></li>
                         </ul>
                      </div>
                   </div>
@@ -722,23 +747,22 @@ if (!isset($_SESSION['user_name'])) {
       </footer>
 
 
-      <!-- <div class="container__form">
-      <div class="content">
-         <h3>hi, <span>user</span></h3>
-         <h1>welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
-         <p>this is an user page</p>
-         <a href="login_form.php" class="btn">login</a>
-         <a href="register_form.php" class="btn">register</a>
-         <a href="logout.php" class="btn">logout</a>
-      </div>
-   </div> -->
+
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
       <script src="./script.js"></script>
-
+      <script>
+         const links = document.querySelectorAll(".text__tips .topdrop h1");
+         links.forEach((link) => {
+            link.addEventListener("click", () => {
+               link.nextElementSibling.classList.toggle("open");
+               link.querySelector("i").classList.toggle("open");
+            })
+         });
+      </script>
       <script>
          $(document).ready(function() {
             $('.slider-nav').slick({
