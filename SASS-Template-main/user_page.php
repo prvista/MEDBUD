@@ -60,7 +60,7 @@ if (!isset($_SESSION['user_name'])) {
                      </div>
                   </li>
                   <li><a href="">MedTips</a></li>
-                  <li><a href="">Contact</a></li>
+                  <li><a href="#contact">Contact</a></li>
                </ul>
             </div>
 
@@ -518,7 +518,7 @@ if (!isset($_SESSION['user_name'])) {
       </div>
    </section>
 
-   <section class="medtips">
+   <!-- <section class="medtips">
       <div class="medtips__wrapper">
          <div class="title">
             <h1>Med</h1>
@@ -563,7 +563,7 @@ if (!isset($_SESSION['user_name'])) {
          </div>
 
       </div>
-   </section>
+   </section> -->
 
 
 
@@ -635,6 +635,33 @@ if (!isset($_SESSION['user_name'])) {
       </div>
 
 
+      <div class="contact" id="contact">
+         <div class="contact__wrapper">
+            <div class="uppercontact">
+               <div class="uppercontact__text">
+                  <b>Get in touch</b>
+                  <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us...</p>
+
+                  <div class="contact__text__bottom">
+                     <h5><i class="fa-brands fa-facebook"></i>&nbsp;Facebook.com/MedMud</h5>
+                     <h5><i class="fa-solid fa-phone"></i>&nbsp;09673625919</h5>
+                     <h5><i class="fa-solid fa-envelope"></i>&nbsp;MedBud@gmail.com</h5>
+                  </div>
+
+
+
+               </div>
+
+
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+
       <!---------------------- FOOTER SECTION---------------------------------->
       <footer class="footer">
          <!-- <div class="upper__bg">
@@ -667,7 +694,7 @@ if (!isset($_SESSION['user_name'])) {
                            <li><a href="#about">About</a></li>
                            <li><a href="">MedTips</a></li>
                            <li><a href="#service__link">Services</a></li>
-                           <li><a href="">Contact</a></li>
+                           <li><a href="#contact">Contact</a></li>
                         </ul>
                      </div>
                   </div>

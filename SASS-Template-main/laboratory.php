@@ -153,7 +153,6 @@ if (!isset($_SESSION['user_name'])) {
                     <div class="cart-close">&times;</div>
                     <div class="cart-items-total">
                         <div class="cart__nav__head">
-                            <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="">
                             <h2>Lab Test Bookings</h2>
                         </div>
 
@@ -635,7 +634,7 @@ if (!isset($_SESSION['user_name'])) {
 
                             const deleteButton = document.createElement('button');
                             deleteButton.classList.add('delete-btn');
-                            deleteButton.innerHTML = 'x';
+                            deleteButton.innerHTML = 'X';
                             deleteButton.style.cssText = `
                                                                 float: right;
                                                                 font-size: 2.3rem;

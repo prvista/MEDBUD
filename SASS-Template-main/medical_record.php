@@ -10,6 +10,7 @@ if (!isset($_SESSION['admin_name'])) {
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,7 @@ if (!isset($_SESSION['admin_name'])) {
                     <img src="./dist/components/img/logo__bgremoved_ver2.png" alt="" />
                 </div>
 
-                <div class="header__nav" id="head__red">
+                <div class="header__nav">
                     <ul>
                         <li><a href="./user_page.php">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -175,7 +176,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <div class="med__banner__text">
                             <h2>MedBud Medical Record</h2>
                             <!-- <h3><?php echo $_SESSION['user_name'] ?></h3> -->
-                            <p>MedBud allows users to effortlessly upload and manage their medical records, ensuring easy access and organized documentation for enhanced healthcare management.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel minus in, quos perferendis nam quas reiciendis impedit maiores saepe.</p>
                         </div>
                     </div>
                 </div>
@@ -191,7 +192,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <div class="patient__input">
                             <h2>Medical Record Form</h3>
                                 <span></span>
-                                <form action="../SASS-Template-main/medical_record.php" method="POST">
+                                <form action="../SASS-Template-main/patient_form_post.php" method="POST">
                                     <div class="info_title">
                                         <h3>Personal Information</h3>
                                     </div>

@@ -102,7 +102,82 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
             </div>
 
-            
+            <?php
+            $servername = "localhost";
+            $username = "root"; // Change as per your MySQL credentials
+            $password = ""; // Change as per your MySQL credentials
+            $dbname = "patientinfo";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT * FROM patient_info";
+            $result = $conn->query($sql);
+            ?>
+
+
+            <?php
+            $conn->close();
+            ?>
+
+            <table class="table__app" border="1">
+            <tr>
+               <th>Record ID</th>
+               <th>First Name</th>
+               <th>Middle Name</th>
+               <th>Last Name</th>
+               <th>Date of Birth</th>
+               <th>Age</th>
+               <th>Gender </th>
+               <th>Blood Type</th>
+               <th>Nationality</th>
+               <th>Email Address</th>
+               <th>Home Address</th>
+               <th>Contact Number</th>
+               <th>First Emergency Contact Name</th>
+               <th>First Emergency Contact Relationship</th>
+               <th>First Emergency Contact Number</th>
+               <th>Second Emergency Contact Name</th>
+               <th>Second Emergency Contact Relationship</th>
+               <th>Second Emergency Contact Number</th>
+               <th>Known Medical Condition</th>
+               <th>Allergies</th>
+            </tr>
+
+            <?php
+            if ($result->num_rows > 0) {
+               while ($row = $result->fetch_assoc()) {
+                  echo "<tr>";
+                  echo "<td>" . $row["record_id"] . "</td>";
+                  echo "<td>" . $row["first_name"] . "</td>";
+                  echo "<td>" . $row["middle_name"] . "</td>";
+                  echo "<td>" . $row["last_name"] . "</td>";
+                  echo "<td>" . $row["date_birth"] . "</td>";
+                  echo "<td>" . $row["age"] . "</td>";
+                  echo "<td>" . $row["gender"] . "</td>";
+                  echo "<td>" . $row["blood_type"] . "</td>";
+                  echo "<td>" . $row["nationality"] . "</td>";
+                  echo "<td>" . $row["email_address"] . "</td>";
+                  echo "<td>" . $row["home_address"] . "</td>";
+                  echo "<td>" . $row["contact_no"] . "</td>";
+                  echo "<td>" . $row["emer_full_name_1"] . "</td>"; 
+                  echo "<td>" . $row["relationship_1"] . "</td>";
+                  echo "<td>" . $row["emer_contact_1"] . "</td>";   
+                  echo "<td>" . $row["emer_full_name_2"] . "</td>";
+                  echo "<td>" . $row["relationship_2"] . "</td>";
+                  echo "<td>" . $row["emer_contact_2"] . "</td>";
+                  echo "<td>" . $row["known_medical_condition"] . "</td>";
+                  echo "<td>" . $row["allergies"] . "</td>";
+                  echo "</tr>";
+               }
+            } else {
+               echo "<tr><td colspan='10'>No Form Entries Found!</td></tr>";
+            }
+            ?>
 
 
 
